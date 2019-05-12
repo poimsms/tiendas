@@ -1,0 +1,63 @@
+<div id="navbar" #contenedor class="container-fluid"
+  style="transition: top 0.3s;z-index:100;position:fixed;top:0xp;left:0px;">
+  <div class="row">
+    <div class="col-12" style="background:darkorange">
+      <div style="height:60px;width:100%;display:flex;align-items:center;justify-content:space-between;padding:15px">
+        <div style="display:flex;align-items:center">
+
+          <i *ngIf="!_control.isArrow" (click)="_control.isSidebar = true" class="fas fa-bars"
+            style="color:white;font-size:18px;margin-right:20px"></i>
+          <i *ngIf="_control.isArrow" (click)="openHome()" class="fas fa-arrow-left"
+            style="color:white;font-size:18px;margin-right:20px"></i>
+
+          <!-- <img src="assets/rattata.svg" style="width:30px"> -->
+          <div style="color:white;font-size:26px;font-weight:500;">
+            joopiter
+          </div>
+        </div>
+        <div>
+          <i (click)="addApp = !addApp" class="fas fa-plus-square"
+            style="color:white;font-size:18px;margin-right:20px"></i>
+          <i (click)="showLocation = true" class="fas fa-map-marker-alt" style="color:white;font-size:22px"></i>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="_control.showSections" class="col-12" style="background:white;border-bottom:1px solid #eee">
+
+      <app-sections></app-sections>
+
+    </div>
+    
+  </div>
+</div>
+
+
+<div *ngIf="addApp"
+  style="padding:20px;z-index:999;position:fixed;top:0px;left:0px;height:100%;width:100%;background:rgb(255, 140, 0, 0.9)">
+  <div style="margin-top:30%;">
+    <div style="font-size:18px;font-weight:600;color:white">
+      Agrega joopiter a la pantalla principal
+    </div>
+    <div style="margin-top:5px;font-size:13px;font-weight:400;color:white">
+      Búsca en el menu de tu navegador la opción para agregar joopiter como un acceso rápido
+    </div>
+    <div (click)="addApp = !addApp"
+      style="font-size:14px;margin-top:20px;padding:4px;background:white;border-radius:2px;color:#555;padding-left:10px;padding-right:10px;display:inline-block">
+      HECHO!
+    </div>
+  </div>
+</div>
+
+
+
+<app-navbar *ngIf="_control.isSidebar"></app-navbar>
+
+
+<div *ngIf="showLocation" (click)="showLocation = false"
+  style="position:fixed;z-index:999;left:0px;top:0px;width:100%;height:100%;background:rgb(68, 68, 68, 0.6);display:flex;align-items:center;justify-content:center">
+  <div style="border-radius:3px;padding:50px;background:white;">
+    <i class="far fa-dot-circle" style="font-size:18px;color:dodgerblue"></i>
+    <span style="font-size:18px;margin-left:20px">Valdivia</span>
+  </div>
+</div>

@@ -1,0 +1,135 @@
+<div style="height:10px"></div>
+
+<div *ngIf="_control.isHome" class="row">
+  <div class="col-4">
+    <div (click)="openSeccion('belleza')" style="width:100%;text-align:center">
+      <i class="fas fa-female" style="font-size:22px;color:lightpink"></i>
+      <div style="font-size:15px;color:#555;width:100%;text-align:center">
+        Belleza
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div (click)="openSeccion('estilo')" style="width:100%;text-align:center">
+      <i class="fas fa-cut" style="font-size:22px;color:coral"></i>
+      <div style="font-size:15px;color:#555;width:100%;text-align:center">
+        Estilo
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div (click)="openSeccion('mascotas')" style="width:100%;text-align:center">
+      <i class="fas fa-dog" style="font-size:22px;color:slateblue"></i>
+      <div style="font-size:15px;color:#555;width:100%;text-align:center">
+        Mascotas
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div *ngIf="_control.isBelleza" class="row">
+  <div class="col-3">
+    <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
+      <i class="fas fa-female" style="font-size:22px;color:lightpink"></i>
+      <div style="font-size:15px;color:#555;width:100%;text-align:center">
+        Rostro
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
+      <i class="fas fa-cut" style="font-size:22px;color:coral"></i>
+      <div style="font-size:15px;color:#555;width:100%;text-align:center">
+        Piel
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
+      <i class="fas fa-dog" style="font-size:22px;color:slateblue"></i>
+      <div style="font-size:15px;color:#555;width:100%;text-align:center">
+        Masaje
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
+      <i class="fas fa-dog" style="font-size:22px;color:slateblue"></i>
+      <div style="font-size:15px;color:#555;width:100%;text-align:center">
+        Pies
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div *ngIf="_control.isEstilo" class="row">
+  <div class="col-3">
+    <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
+      <i class="fas fa-female" style="font-size:22px;color:lightpink"></i>
+      <div style="font-size:15px;color:#555;width:100%;text-align:center">
+        Uñas
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
+      <i class="fas fa-cut" style="font-size:22px;color:coral"></i>
+      <div style="font-size:15px;color:#555;width:100%;text-align:center">
+        Cabello
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
+      <i class="fas fa-dog" style="font-size:22px;color:slateblue"></i>
+      <div style="font-size:15px;color:#555;width:100%;text-align:center">
+        Barbería
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
+      <i class="fas fa-dog" style="font-size:22px;color:slateblue"></i>
+      <div style="font-size:15px;color:#555;width:100%;text-align:center">
+        Tattoo
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div *ngIf="_control.isMascotas" class="row">
+  <div class="col-3">
+    <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
+      <i class="fas fa-female" style="font-size:22px;color:lightpink"></i>
+      <div style="font-size:15px;color:#555;width:100%;text-align:center">
+        Clínica
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
+      <i class="fas fa-cut" style="font-size:22px;color:coral"></i>
+      <div style="font-size:15px;color:#555;width:100%;text-align:center">
+        Paseo
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
+      <i class="fas fa-dog" style="font-size:22px;color:slateblue"></i>
+      <div style="font-size:15px;color:#555;width:100%;text-align:center">
+        Estética
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div style="height:5px"></div>

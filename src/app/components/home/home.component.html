@@ -1,0 +1,75 @@
+<div style="height:120px"></div>
+
+<!-- <div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <div style="width:100%;text-align:center">
+        <i class="fas fa-hard-hat" style="font-size:22px;color:darkorange"></i>
+        <div style="width:100%;text-align:center">
+          Belleza
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div style="width:100%;text-align:center">
+        <i class="fas fa-hard-hat" style="font-size:22px;color:coral"></i>
+        <div style="width:100%;text-align:center">
+          Estilo
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div style="width:100%;text-align:center">
+        <i class="fas fa-hard-hat" style="font-size:22px;color:slateblue"></i>
+        <div style="width:100%;text-align:center">
+          Mascotas
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div *ngFor="let item of list" (click)="openContent()" style="margin-top:20px;margin-left:15px;margin-right:15px">
+
+  <div style="font-size:15px;font-weight:600;color:#444">
+    Hola soy el eslogan de la tienda
+  </div>
+
+  <div style="display:flex;align-items:center">
+    <div style="display:flex;margin-top:2px">
+      <i class="fas fa-star" style="font-size:14px;color:gold;margin-right:5px"></i>
+      <i class="fas fa-star" style="font-size:14px;color:gold;margin-right:5px"></i>
+      <i class="fas fa-star" style="font-size:14px;color:gold;margin-right:5px"></i>
+      <i class="fas fa-star" style="font-size:14px;color:whitesmoke;margin-right:5px"></i>
+      <i class="fas fa-star" style="font-size:14px;color:whitesmoke;margin-right:5px"></i>
+    </div>
+    <div style="font-size:15px;margin-left:15px;color:darkorange">
+      14 comentarios
+    </div>
+  </div>
+
+  <div style="color:#999;font-size:16px">
+    Salon de belleza Susana
+    <svg-icon src="assets/coupon.svg" [svgStyle]="{ 'width.px':15,'fill':'gold', 'height.px':15, 'margin-right.px':5 }">
+    </svg-icon>
+    <svg-icon src="assets/money-bag.svg"
+      [svgStyle]="{ 'width.px':15,'fill':'sandybrown', 'height.px':15, 'margin-right.px':5 }"></svg-icon>
+  </div>
+
+  <div style="width:100%;display:flex;align-items:center;justify-content:space-between">
+    <img src="https://www.useit.es/sites/default/files/featured-2_0.jpg"
+      style="height:100px;width:30%;object-fit:cover">
+    <img src="https://www.useit.es/sites/default/files/featured-2_0.jpg"
+      style="height:100px;width:30%;object-fit:cover">
+    <img src="https://www.useit.es/sites/default/files/featured-2_0.jpg"
+      style="height:100px;width:30%;object-fit:cover">
+  </div>
+</div>
+
+
+
+<div *ngIf="showFlecha" style="position:fixed;z-index:999;right:20px;bottom:40px">
+  <i (click)="subir()" class="fas fa-arrow-circle-up" style="color:#444;font-size:36px"></i>
+</div>
+
