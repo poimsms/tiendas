@@ -104,7 +104,13 @@ export class ControlService {
       this.showArrow = true;
       this.showSections = false;
       this.back = 'home'; 
-    }    
+    }
+    if (page == 'oferta') {
+      this.tituloPage = 'Atrás';
+      this.showArrow = true;
+      this.showSections = false;
+      this.back = 'contenido'; 
+    }   
     if (page == 'nuevo') {
       this.tituloPage = page;
       this.showArrow = true;

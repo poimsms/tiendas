@@ -1,7 +1,7 @@
 <div id="navbar" #contenedor class="container-fluid"
   style="transition: top 0.3s;z-index:100;position:fixed;top:0xp;left:0px;">
   <div class="row">
-    <div class="col-12" style="background:#333">
+    <div class="col-12" style="background:darkorange">
       <div style="height:60px;width:100%;display:flex;align-items:center;justify-content:space-between;padding:15px">
         <div style="display:flex;align-items:center">
 
@@ -14,7 +14,7 @@
           <div *ngIf="_control.tituloPage != 'Atrás'" style="color:white;font-size:22px;text-transform:capitalize;font-weight:500;">
             {{_control.tituloPage}}
           </div>
-          <div *ngIf="_control.tituloPage == 'Atrás'" style="color:white;font-size:20px;font-weight:500;">
+          <div *ngIf="_control.tituloPage == 'Atrás'" (click)="back()" style="color:white;font-size:20px;font-weight:500;">
               Atrás
             </div>
         </div>
@@ -58,9 +58,6 @@
       style="font-size:14px;margin-top:20px;padding:6px;background:white;border-radius:2px;color:#555;padding-left:15px;padding-right:15px;display:inline-block">
       HECHO!
     </div>
-    <h1> {{res1}} </h1>
-    <h1> {{res2}} </h1>
-
   </div>
 </div>
 

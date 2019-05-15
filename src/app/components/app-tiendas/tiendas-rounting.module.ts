@@ -22,7 +22,7 @@ const routes: Routes = [
     { path: 'contenido', component: ContenidoComponent },
     { path: 'agenda', component: AgendaComponent },
     { path: 'agenda-config', component: AgendaConfigComponent },
-    { path: 'cupon', component: CuponComponent },
+    { path: 'oferta', component: CuponComponent },
     { path: 'formulario-inicio', component: FormularioInicioComponent },
     { path: 'tienda', component: TiendaComponent },
     { path: 'cupones', component: ProductosComponent },

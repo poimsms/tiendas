@@ -54,6 +54,11 @@ isFacebookApp() {
       this._control.showArrow = true;
       this._control.tituloPage = 'Mi tienda';
     }
+    if ( this._control.back == 'contenido' ) {
+      this.router.navigateByUrl('/m-contenido');
+      this._control.showArrow = true;
+      this._control.tituloPage = '';
+    }
   }
 
 

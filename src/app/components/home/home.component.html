@@ -3,29 +3,40 @@
 
 <div *ngFor="let tienda of tiendas" (click)="openContent(tienda)" style="margin-top:20px;margin-left:15px;margin-right:15px">
     <!-- [ngStyle]="{'font-size': isFb ? '17px'; ''}" -->
-  <div  style="font-size:17px;font-weight:600;color:#444">
-    {{tienda.descripcion}}
+  <div  style="display:flex;align-items:center;">
+    <img [src]="tienda.logo.url" style="border:1px solid #eee;height:60px;width:60px;object-fit:cover;border-radius:15px;margin-right:10px">
+
+    <div  style="font-size:17px;font-weight:600;color:#444">
+        {{tienda.descripcion}}
+        <svg-icon *ngIf="tienda.isCupon" src="assets/coupon.svg" [svgStyle]="{ 'width.px':15,'fill':'gold', 'height.px':15, 'margin-right.px':5 }">
+        </svg-icon>
+        <svg-icon *ngIf="tienda.isBeneficio" src="assets/money-bag.svg"
+          [svgStyle]="{ 'width.px':15,'fill':'sandybrown', 'height.px':15, 'margin-right.px':5 }">
+        </svg-icon>
+        <div style="display:flex;align-items:center">
+            <div style="display:flex;margin-top:2px">
+              <i class="fas fa-star" [ngStyle]="{'color': tienda.startAvg >= 1 ? 'gold':'whitesmoke'}" style="font-size:14px;margin-right:5px"></i>
+              <i class="fas fa-star" [ngStyle]="{'color': tienda.startAvg >= 2 ? 'gold':'whitesmoke'}" style="font-size:14px;margin-right:5px"></i>
+              <i class="fas fa-star" [ngStyle]="{'color': tienda.startAvg >= 3 ? 'gold':'whitesmoke'}" style="font-size:14px;margin-right:5px"></i>
+              <i class="fas fa-star" [ngStyle]="{'color': tienda.startAvg >= 4 ? 'gold':'whitesmoke'}" style="font-size:14px;margin-right:5px"></i>
+              <i class="fas fa-star" [ngStyle]="{'color': tienda.startAvg >= 5 ? 'gold':'whitesmoke'}" style="font-size:14px;margin-right:5px"></i>
+            </div>
+            <div style="font-weight:400;font-size:15px;margin-left:14px;color:darkorange">
+              {{tienda.comentarios}} comentarios
+            </div>
+          </div>
+    </div>
   </div>
 
-  <div style="display:flex;align-items:center">
-    <div style="display:flex;margin-top:2px">
-      <i class="fas fa-star" [ngStyle]="{'color': tienda.startAvg >= 1 ? 'gold':'whitesmoke'}" style="font-size:14px;margin-right:5px"></i>
-      <i class="fas fa-star" [ngStyle]="{'color': tienda.startAvg >= 2 ? 'gold':'whitesmoke'}" style="font-size:14px;margin-right:5px"></i>
-      <i class="fas fa-star" [ngStyle]="{'color': tienda.startAvg >= 3 ? 'gold':'whitesmoke'}" style="font-size:14px;margin-right:5px"></i>
-      <i class="fas fa-star" [ngStyle]="{'color': tienda.startAvg >= 4 ? 'gold':'whitesmoke'}" style="font-size:14px;margin-right:5px"></i>
-      <i class="fas fa-star" [ngStyle]="{'color': tienda.startAvg >= 5 ? 'gold':'whitesmoke'}" style="font-size:14px;margin-right:5px"></i>
-    </div>
-    <div style="font-size:15px;margin-left:14px;color:darkorange">
-      {{tienda.comentarios}} comentarios
-    </div>
-  </div>
+  
 
-  <div style="color:#777;font-size:15px">
+  <div style="margin-top:5px;margin-bottom:5px;color:#555;font-size:16px">
     {{tienda.nombre}}
-    <svg-icon *ngIf="tienda.isCupon" src="assets/coupon.svg" [svgStyle]="{ 'width.px':15,'fill':'gold', 'height.px':15, 'margin-right.px':5 }">
+    <!-- <svg-icon *ngIf="tienda.isCupon" src="assets/coupon.svg" [svgStyle]="{ 'width.px':15,'fill':'gold', 'height.px':15, 'margin-right.px':5 }">
     </svg-icon>
     <svg-icon *ngIf="tienda.isBeneficio" src="assets/money-bag.svg"
-      [svgStyle]="{ 'width.px':15,'fill':'sandybrown', 'height.px':15, 'margin-right.px':5 }"></svg-icon>
+      [svgStyle]="{ 'width.px':15,'fill':'sandybrown', 'height.px':15, 'margin-right.px':5 }">
+    </svg-icon> -->
   </div>
 
   <div style="width:100%;display:flex;align-items:center;justify-content:space-between">
