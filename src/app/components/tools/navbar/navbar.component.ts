@@ -19,24 +19,28 @@ export class NavbarComponent implements OnInit {
 
   select(place) {
     if (place == 'home') {
+      this._control.tituloPage = 'joopiter';
       this._control.isSideHome = true;
       this._control.isSideTienda = false;
       this._control.isSideAgenda = false;
       this._control.isSideSalir = false;
     }
     if (place == 'tienda') {
+      this._control.tituloPage = 'Mi tienda';
       this._control.isSideHome = false;
       this._control.isSideTienda = true;
       this._control.isSideAgenda = false;
       this._control.isSideSalir = false;
     }
     if (place == 'agenda') {
+      this._control.tituloPage = 'Mi agenda';
       this._control.isSideHome = false;
       this._control.isSideTienda = false;
       this._control.isSideAgenda = true;
       this._control.isSideSalir = false;
     }
     if (place == 'salir') {
+      this._control.tituloPage = 'joopiter';
       this._control.isSideHome = false;
       this._control.isSideTienda = false;
       this._control.isSideAgenda = false;

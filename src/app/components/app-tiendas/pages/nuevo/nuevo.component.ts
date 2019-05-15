@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ControlService } from 'src/app/services/control.service';
 
 @Component({
   selector: 'app-nuevo',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NuevoComponent implements OnInit {
 
-  constructor() { }
+  isAgenda = false;
+  
+  constructor(
+    private router: Router,
+    private _control: ControlService
+    ) { }
 
   ngOnInit() {
+    this._control.setPage('nuevo');
   }
 
 }

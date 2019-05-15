@@ -13,6 +13,8 @@ export class ControlService {
   isMascotas = false;
   isArrow = false;
   showSections = true;
+  showArrow = false;
+  showGuardar = false;
 
   // CONTROL SIDEBAR
   isSidebar = false;
@@ -21,20 +23,23 @@ export class ControlService {
   isSideTienda = false;
   isSideSalir = false;
 
+  back = 'home';
+  rightButtons = 'home';
+
 
   fetchCategory = new Subject<any>();
 
+  tituloPage = 'joopiter';
 
 
   constructor() { 
-    this.fetchCategory.next({ text: 'todo'});
   }
 
   activarSeccion(seccion) {
 
+    this.back = 'home';
     this.fetchCategory.next(seccion);
     this.showSections = true;
-
 
     if (seccion == 'home') {
       this.isHome = true;
@@ -47,6 +52,8 @@ export class ControlService {
       this.isBelleza = true;
       this.isEstilo = false;
       this.isMascotas = false;
+      this.tituloPage = 'Atrás';
+      this.showArrow = true;
     }
 
     if (seccion == 'estilo') {
@@ -54,6 +61,8 @@ export class ControlService {
       this.isBelleza = false;
       this.isEstilo = true;
       this.isMascotas = false;
+      this.tituloPage = 'Atrás';
+      this.showArrow = true;
     }
 
     if (seccion == 'mascotas') {
@@ -61,15 +70,55 @@ export class ControlService {
       this.isBelleza = false;
       this.isEstilo = false;
       this.isMascotas = true;
+      this.tituloPage = 'Atrás';
+      this.showArrow = true;
     }
   }
-  
+   
   categoria(categoria) {
     this.fetchCategory.next(categoria);
   }
 
-  toggleArrow() {
-    this.isArrow = !this.isArrow;
-  }
+  setPage(page) {
 
+    this.rightButtons = 'home';
+
+    if (page == 'home') {
+      this.tituloPage = 'joopiter';
+      this.showArrow = false;
+      this.showSections = true;      
+    }
+    if (page == 'tienda') {
+      this.tituloPage = 'Mi tienda';
+      this.showArrow = false;
+      this.showSections = false;      
+    }   
+    if (page == 'agenda') {
+      this.tituloPage = 'Mi agenda';
+      this.showArrow = false;
+      this.showSections = false;
+      this.rightButtons = 'agenda';
+    }
+    if (page == 'contenido') {
+      this.tituloPage = 'Atrás';
+      this.showArrow = true;
+      this.showSections = false;
+      this.back = 'home'; 
+    }    
+    if (page == 'nuevo') {
+      this.tituloPage = page;
+      this.showArrow = true;
+      this.rightButtons = 'publicar';
+      this.showSections = false;
+      this.back = 'tienda';    
+    }
+
+    if (page == 'cupones' || page == 'ventas') {
+      this.tituloPage = page;
+      this.showArrow = true;
+      this.showSections = false;
+      this.back = 'tienda';    
+    }
+
+  }
 }

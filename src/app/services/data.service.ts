@@ -6,12 +6,14 @@ import { HttpClient } from "@angular/common/http";
   providedIn: 'root'
 })
 export class DataService {
-  apiURL: string;
+
+  // apiURL = 'http://localhost:3000';
+  apiURL = 'https://joopiterweb.com';
 
   constructor(public http: HttpClient) { }
 
   getTiendas(categoria) {
-    const url = `${this.apiURL}/tiendas/all?categoria=${categoria}`;
+    const url = `${this.apiURL}/tiendas/buscar-tiendas?categoria=${categoria}`;
     return this.http.get(url).toPromise();
   }
 }

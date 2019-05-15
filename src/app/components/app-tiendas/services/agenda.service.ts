@@ -6,7 +6,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AgendaService {
 
-  apiURL = 'http://localhost:3000';
+  // apiURL = 'http://localhost:3000';
+
+  
+  // apiURL = 'https://joopiter.herokuapp.com';
+
+  apiURL = 'https://joopiterweb.com';
+
 
   dias = [];
 

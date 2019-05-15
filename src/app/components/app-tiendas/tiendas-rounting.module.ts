@@ -12,6 +12,9 @@ import { AgendaConfigComponent } from './pages/agenda-config/agenda-config.compo
 import { MPrincipalComponent } from './maqueta/m-principal/m-principal.component';
 import { MContenidoComponent } from './maqueta/m-contenido/m-contenido.component';
 import { MCuponComponent } from './maqueta/m-cupon/m-cupon.component';
+import { ProductosComponent } from './pages/productos/productos.component';
+import { VentasComponent } from './pages/ventas/ventas.component';
+import { NuevoComponent } from './pages/nuevo/nuevo.component';
 
 const routes: Routes = [
 
@@ -22,6 +25,9 @@ const routes: Routes = [
     { path: 'cupon', component: CuponComponent },
     { path: 'formulario-inicio', component: FormularioInicioComponent },
     { path: 'tienda', component: TiendaComponent },
+    { path: 'cupones', component: ProductosComponent },
+    { path: 'ventas', component: VentasComponent },
+    { path: 'nuevo', component: NuevoComponent },
 
     { path: 'm-principal', component: MPrincipalComponent },
     { path: 'm-contenido', component: MContenidoComponent },

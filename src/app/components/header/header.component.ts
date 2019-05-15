@@ -10,6 +10,8 @@ import { ElementRef } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  res1: any;
+  res2: any;
   @ViewChild('contenedor') contenedor: ElementRef;
 
   addApp = false;
@@ -30,17 +32,33 @@ export class HeaderComponent implements OnInit {
       }
       prevScrollpos = currentScrollPos;
     }
+    this.res1 = this.isFacebookApp();
    }
 
-  
-  openHome() {
-    this.router.navigateByUrl('/home');
-    this._control.activarSeccion('home');
-    this._control.toggleArrow();
+
+isFacebookApp() {
+    var ua = navigator.userAgent || navigator.vendor;
+  this.res2 = ua;
+    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+}
+
+  back() {
+    if ( this._control.back == 'home' ) {
+      this.router.navigateByUrl('/home');
+      this._control.activarSeccion('home');
+      this._control.showArrow = false;
+      this._control.tituloPage = 'joopiter';
+    }
+    if ( this._control.back == 'tienda' ) {
+      this.router.navigateByUrl('/tienda');
+      this._control.showArrow = true;
+      this._control.tituloPage = 'Mi tienda';
+    }
   }
 
 
   ngOnInit() {
+    this._control.tituloPage = 'joopiter';
   }
 
 }

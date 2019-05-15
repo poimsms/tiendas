@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ControlService } from 'src/app/services/control.service';
 
 @Component({
   selector: 'app-m-contenido',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MContenidoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _control:ControlService) { }
 
   ngOnInit() {
+    this._control.setPage('contenido');
   }
 
 }

@@ -17,6 +17,9 @@ import { AgendaConfigComponent } from './pages/agenda-config/agenda-config.compo
 import { MPrincipalComponent } from './maqueta/m-principal/m-principal.component';
 import { MContenidoComponent } from './maqueta/m-contenido/m-contenido.component';
 import { MCuponComponent } from './maqueta/m-cupon/m-cupon.component';
+import { NuevoComponent } from './pages/nuevo/nuevo.component';
+import { ProductosComponent } from './pages/productos/productos.component';
+import { VentasComponent } from './pages/ventas/ventas.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { MCuponComponent } from './maqueta/m-cupon/m-cupon.component';
     AgendaConfigComponent,
     FormularioInicioComponent,
     CuponComponent,
+    NuevoComponent,
+    ProductosComponent,
+    VentasComponent,
     MPrincipalComponent,
     MContenidoComponent,
     MCuponComponent

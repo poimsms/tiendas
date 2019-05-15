@@ -12,7 +12,6 @@ export class SectionsComponent implements OnInit {
 
   openSeccion(seccion) {
     this._control.activarSeccion(seccion);
-    this._control.toggleArrow();
   }
 
   ngOnInit() {

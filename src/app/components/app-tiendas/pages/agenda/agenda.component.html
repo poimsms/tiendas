@@ -1,7 +1,8 @@
 <div style="height:70px"></div>
 
 
-<div *ngIf="false" style="padding:3px;padding-bottom:0px;padding-left:20px;display:flex;align-items:center;flex-wrap:wrap">
+<div *ngIf="false"
+  style="padding:3px;padding-bottom:0px;padding-left:20px;display:flex;align-items:center;flex-wrap:wrap">
 
   <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
     <div style="border-radius:3px;height:20px;width:20px;background:white;border:1px solid #bbb;margin-right:5px">
@@ -29,7 +30,8 @@
 
 
 
-<div class="scrolling-wrapper" style="background:white;position:fixed;top:50px;padding-top:20px;left:0px">
+<div class="scrolling-wrapper"
+  style="touch-action: manipulation;background:white;position:fixed;top:0px;padding-top:70px;left:0px">
   <div *ngFor="let dia of dias;let i = index" (click)="activarDia(i)" class="card"
     [ngClass]="{'activeDay': dia.isActive}">
     <div style="width:100%;text-align:center;font-size:22px;">
@@ -41,53 +43,120 @@
   </div>
 </div>
 
-<!-- <hr> -->
+
+<div style="height:130px"></div>
 
 
-<!-- <div class="container-fluid">
 
-    <div class="col-12"> -->
+<div *ngIf="false"
+  style="padding:3px;padding-bottom:0px;padding-left:20px;display:flex;align-items:center;flex-wrap:wrap">
 
-<div *ngFor="let dia of dias; let i = index">
+  <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
+      <i  class="fas fa-lock" style="margin-right:5px;font-size:21px;color:#bbb"></i>
+
+    <div style="color:#777">
+      Bloqueado
+    </div>
+  </div>
+
+  <!-- <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
+    <div style="border-radius:3px;height:20px;width:20px;background:gold;margin-right:5px"></div>
+    <div style="color:#777">
+      Disponible para reservar
+    </div>
+  </div> -->
+
+  <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
+      <i class="fas fa-check" style="margin-right:5px;font-size:23px;color:gold"></i>
+
+    <div style="color:#777">
+      Agregado
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<div *ngFor="let dia of dias; let i = index" style="touch-action: manipulation">
+
+  <div *ngIf="dia.isActive">
+
+    <div *ngFor="let hora of dia.horas; let j = index">
+
+      <div (click)="activarHora(i, j, dia.isActual)" style="margin-left:20px">
+
+        <div *ngIf="dia.isActual && j != 0"
+          style="height:55px;margin-left:45px;display:flex;align-items:center;justify-content:center">
+          <i *ngIf="hora.isActive" class="fas fa-check" style="margin-top:10px;margin-right:20px;font-size:23px;color:gold"></i>
+        </div>
+        <div *ngIf="!dia.isActual && j != 0" style="height:55px;margin-left:45px;display:flex;align-items:center;justify-content:center">
+            <i  class="fas fa-lock" style="margin-top:10px;font-size:21px;color:#bbb"></i>
+        </div>
+        <div *ngIf="j == 0" style="background:white;height:55px;margin-left:45px">
+        </div>
+
+        <div style="width:100%;display:flex;align-items:center;justify-content:flex-start">
+          <div style="font-size:14px;color:#555">
+            {{hora.hora}}
+          </div>
+
+          <div style="flex-grow: 1">
+            <div *ngIf="dia.isActual"
+              style="margin-top:0px;margin-left:10px;height:21px;border-bottom:2px solid #eee">
+            </div>
+            <div *ngIf="!dia.isActual"
+              style="margin-top:0px;margin-left:10px;height:21px;border-bottom:2px solid #eee">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- <div *ngFor="let dia of dias; let i = index" style="touch-action: manipulation">
 
   <div *ngIf="dia.isActive">
 
     <div *ngFor="let hora of dia.horas; let j = index">
 
       <div (click)="activarHora(i, j, dia.isActual)" style="width:100%;margin-left:20px">
-        <!-- <div style="margin-left:20px"> -->
 
-          <div *ngIf="dia.isActual && j != 0" [ngStyle]="{'background': hora.isActive ? 'gold':'white'}"
-            style="height:55px;margin-left:43px">
-          </div>
-          <div *ngIf="!dia.isActual && j != 0"
-            style="background:rgb(250, 250, 250);height:55px;;margin-left:43px">
-          </div>
-          <div *ngIf="j == 0" style="background:white;height:55px;margin-left:43px">
+        <div *ngIf="dia.isActual && j != 0" [ngStyle]="{'background': hora.isActive ? 'gold':'white'}"
+          style="height:55px;margin-left:45px">
+        </div>
+        <div *ngIf="!dia.isActual && j != 0" style="background:rgb(250, 250, 250);height:55px;;margin-left:45px">
+        </div>
+        <div *ngIf="j == 0" style="background:white;height:55px;margin-left:45px">
+        </div>
+
+        <div style="width:100%;display:flex;align-items:center;justify-content:flex-start">
+          <div style="font-size:14px;color:#555">
+            {{hora.hora}}
           </div>
 
-          <div style="width:100%;display:flex;align-items:center;justify-content:flex-start">
-            <div style="font-size:14px;color:#555">
-              {{hora.hora}}
+          <div style="flex-grow: 1">
+            <div *ngIf="dia.isActual" [ngStyle]="{'background': hora.isActive ? 'gold':'white'}"
+              style="margin-top:0px;margin-left:10px;height:21px;border-bottom:2px solid #eee">
             </div>
-
-            <div style="flex-grow: 1">
-              <div *ngIf="dia.isActual" [ngStyle]="{'background': hora.isActive ? 'gold':'white'}"
-                style="margin-top:0px;margin-left:10px;height:21px;border-bottom:2px solid #eee">
-              </div>
-              <div *ngIf="!dia.isActual && j != 0"
-                style="background:rgb(250, 250, 250);margin-top:-5px;margin-left:10px;height:17px;border-bottom:2px solid #eee">
-              </div>
+            <div *ngIf="!dia.isActual && j != 0"
+              style="background:rgb(250, 250, 250);margin-top:-5px;margin-left:10px;height:17px;border-bottom:2px solid #eee">
             </div>
-
           </div>
-        <!-- </div> -->
-      <!-- </div>
-    </div> -->
+        </div>
+      </div>
+    </div>
   </div>
-
-
-  </div>
-
-</div>
-</div>
+</div> -->

@@ -1,0 +1,8 @@
+input {
+    -webkit-appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-bottom: 0.5px solid #eee;
+    font-size:18px;
+}

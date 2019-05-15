@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AgendaService } from '../../services/agenda.service';
+import { ControlService } from 'src/app/services/control.service';
 
 @Component({
   selector: 'app-agenda',
@@ -11,11 +12,15 @@ export class AgendaComponent implements OnInit {
   tiendaID = '5c7849bf81f90f22e2b04415';
   dias = [];
 
-  constructor(public _agenda: AgendaService) { 
+  constructor(
+    private _control: ControlService,
+    public _agenda: AgendaService
+    ) { 
     this.obtenerDias()
   }
 
   ngOnInit() {
+    this._control.setPage('agenda');
   }
 
 
@@ -52,7 +57,7 @@ export class AgendaComponent implements OnInit {
 
     console.log(indexHora)
 
-    if (indexHora == 1) {
+    if (indexHora == 0) {
       return;
     }
 

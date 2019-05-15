@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   list = [1, 2, 3, 4, 5];
 
   tiendas = [];
+  isFacebook = false;
 
   constructor(
     private router: Router,
@@ -28,22 +29,29 @@ export class HomeComponent implements OnInit {
 
     this.loadTiendas();
     this.setArrow();
-
+    this.isFacebook = this.detectFacebook();
   }
+  
+  detectFacebook() {
+    var ua = navigator.userAgent || navigator.vendor;
+    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+}
 
   loadTiendas() {
     this.subscription = this._control.fetchCategory
       .subscribe(categoria => {
         console.log(categoria);        
-        // this._data.getTiendas(categoria)
-        // .then((data: any) => this.tiendas = data);
+        this._data.getTiendas(categoria)
+        .then((data: any) => {
+          console.log(data);
+          
+          this.tiendas = data;
+        });
       });
   }
 
   openContent() {
     this.router.navigateByUrl('/m-contenido');
-    this._control.showSections = false;
-    this._control.toggleArrow();
   }
 
   subir() {
@@ -69,6 +77,8 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this._control.activarSeccion('home');
+    this._control.setPage('home');
   }
 
 }
