@@ -26,10 +26,13 @@ export class ControlService {
   back = 'home';
   rightButtons = 'home';
 
+  isLoading = false;
+
 
   fetchCategory = new Subject<any>();
 
   tituloPage = 'joopiter';
+  showRegistro = false;
 
 
   constructor() { 
@@ -46,6 +49,7 @@ export class ControlService {
       this.isBelleza = false;
       this.isEstilo = false;
       this.isMascotas = false;
+      this.showRegistro = false;
     }
     if (seccion == 'belleza') {
       this.isHome = false;
@@ -110,6 +114,7 @@ export class ControlService {
       this.showArrow = true;
       this.showSections = false;
       this.back = 'contenido'; 
+      this.rightButtons = 'oferta';
     }   
     if (page == 'nuevo') {
       this.tituloPage = page;

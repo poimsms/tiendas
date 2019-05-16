@@ -14,6 +14,8 @@ import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/tools/navbar/navbar.component';import { SectionsComponent } from './components/tools/sections/sections.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { RegistroComponent } from './components/tools/registro/registro.component';
+import { LoadingComponent } from './components/tools/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { environment } from '../environments/environment';
     HomeComponent,
     LoginComponent,
     NavbarComponent,
-    SectionsComponent
+    SectionsComponent,
+    RegistroComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

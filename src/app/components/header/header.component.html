@@ -11,12 +11,14 @@
             style="color:white;font-size:18px;margin-right:20px"></i>
 
           <!-- <img src="assets/rattata.svg" style="width:30px"> -->
-          <div *ngIf="_control.tituloPage != 'Atrás'" style="color:white;font-size:22px;text-transform:capitalize;font-weight:500;">
+          <div *ngIf="_control.tituloPage != 'Atrás'"
+            style="color:white;font-size:22px;text-transform:capitalize;font-weight:500;">
             {{_control.tituloPage}}
           </div>
-          <div *ngIf="_control.tituloPage == 'Atrás'" (click)="back()" style="color:white;font-size:20px;font-weight:500;">
-              Atrás
-            </div>
+          <div *ngIf="_control.tituloPage == 'Atrás'" (click)="back()"
+            style="color:white;font-size:20px;font-weight:500;">
+            Atrás
+          </div>
         </div>
         <div *ngIf="_control.rightButtons == 'home'">
           <i (click)="addApp = !addApp" class="fas fa-plus-square"
@@ -30,8 +32,16 @@
           </div>
         </div>
         <div *ngIf="_control.rightButtons == 'agenda'">
-            <i class="fas fa-cog" style="color:white;font-size:22px"></i>
+          <i class="fas fa-cog" style="color:white;font-size:22px"></i>
+        </div>
+        <div *ngIf="_control.rightButtons == 'oferta'">
+          <img *ngIf="false"
+            src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556491438/maqueta/logotipo-barberia-retro_1415-688.jpg"
+            style="border:3px solid #fff;height:35px;width:35px;border-radius:50%;object-fit:cover">
+          <div style="color:white;font-weight:600;font-size:18px">
+            Barberia clásica DUC
           </div>
+        </div>
       </div>
     </div>
 
@@ -73,3 +83,16 @@
     <span style="font-size:18px;margin-left:20px">Valdivia</span>
   </div>
 </div>
+
+
+<div *ngIf="_control.showRegistro" (click)="openRegistro()"
+  style="position:fixed;z-index:999;left:0px;bottom:0px;width:100%;background:#f06595;padding:13px;padding-left:20px;padding-right:20px;display:flex;align-items:center;justify-content:space-between">
+  <div></div>
+  <div style="color:white;font-size:20px;font-weight:600">
+    Registrarse
+  </div>
+  <i (click)="_control.showRegistro = false" class="fas fa-times" style="color:#fff;font-size:15px"></i>
+</div>
+
+
+<app-loading *ngIf="_control.isLoading"></app-loading>

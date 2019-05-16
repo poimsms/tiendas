@@ -12,6 +12,15 @@ export class CuponComponent implements OnInit {
 
   ngOnInit() {
     this._control.setPage('oferta');
+    this.subir();
+  }
+
+  subir() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
 }

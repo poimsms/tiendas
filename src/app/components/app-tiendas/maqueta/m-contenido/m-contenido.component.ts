@@ -18,6 +18,15 @@ export class MContenidoComponent implements OnInit {
 
   ngOnInit() {
     this._control.setPage('contenido');
+    this.subir();
+  }
+
+  subir() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   openCupon() {

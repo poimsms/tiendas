@@ -31,22 +31,21 @@ export class HomeComponent implements OnInit {
     this.setArrow();
     this.isFacebook = this.detectFacebook();
   }
-  
+
   detectFacebook() {
     var ua = navigator.userAgent || navigator.vendor;
     return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
-}
+  }
 
   loadTiendas() {
+    this._control.isLoading = true;
     this.subscription = this._control.fetchCategory
       .subscribe(categoria => {
-        console.log(categoria);        
         this._data.getTiendas(categoria)
-        .then((data: any) => {
-          console.log(data);
-          
-          this.tiendas = data;
-        });
+          .then((data: any) => {
+            this._control.isLoading = false;
+            this.tiendas = data;
+          });
       });
   }
 

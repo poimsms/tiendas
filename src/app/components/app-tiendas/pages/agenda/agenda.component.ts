@@ -25,16 +25,11 @@ export class AgendaComponent implements OnInit {
 
 
   
-  obtenerDias() {
-    // let loading = this.loadingCtrl.create({
-    //   content: 'Porfavor espere...'
-    // });
-  
-    // loading.present();
-  
+  obtenerDias() { 
+    this._control.isLoading = true;  
     this._agenda.construirDias(this.tiendaID)
       .then((dias: any) => {
-        // loading.dismiss();
+        this._control.isLoading = false;
         this.dias = dias;
         this.dias[1].isActive = true;
       });

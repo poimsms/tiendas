@@ -9,7 +9,7 @@ import { ElementRef } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  showRegistro = true;
   res1: any;
   res2: any;
   @ViewChild('contenedor') contenedor: ElementRef;
@@ -59,6 +59,12 @@ isFacebookApp() {
       this._control.showArrow = true;
       this._control.tituloPage = '';
     }
+  }
+
+  openRegistro() {
+    this.router.navigateByUrl('/registro');
+    this._control.showRegistro = false;
+    this._control.showSections = false;
   }
 
 

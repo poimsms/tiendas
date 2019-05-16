@@ -3,18 +3,22 @@
 <div style="padding:15px">
 
   <div style="width:100%;display:flex;align-items:center">
-    <img src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556491438/maqueta/logotipo-barberia-retro_1415-688.jpg"
+    <img
+      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556491438/maqueta/logotipo-barberia-retro_1415-688.jpg"
       style="height:80px;width:80px;border-radius:15px;object-fit:cover">
     <div style="display:inline-block;margin-left:20px">
       <div style="font-size:18px;color:#555;font-weight:500">
         Barbería clásica DUP
       </div>
-      <div style="display:flex;margin-top:2px">
+      <div style="display:flex;margin-top:2px;align-items:center">
         <i class="fas fa-star" style="font-size:14px;color:gold;margin-right:5px"></i>
         <i class="fas fa-star" style="font-size:14px;color:gold;margin-right:5px"></i>
         <i class="fas fa-star" style="font-size:14px;color:gold;margin-right:5px"></i>
         <i class="fas fa-star" style="font-size:14px;color:whitesmoke;margin-right:5px"></i>
         <i class="fas fa-star" style="font-size:14px;color:whitesmoke;margin-right:5px"></i>
+      <div style="font-size:15px;color:#777">
+        (133)
+      </div>
       </div>
       <div style="font-size:15px;margin-top:2px;color:darkorange">
         14 comentarios
@@ -42,7 +46,7 @@
     </div>
   </div>
 
-  <div
+  <!-- <div
     style="width:100%;padding-top:15px;padding-bottom:5px;display:flex;align-items:center;justify-content:space-between">
     <div>
       <i class="fas fa-map-marker-alt" style="color:#bbb;font-size:18px"></i>
@@ -51,7 +55,7 @@
       </span>
     </div>
     <i class="fas fa-chevron-right" style="color:#bbb;font-size:18px"></i>
-  </div>
+  </div> -->
 
   <hr>
 
@@ -78,20 +82,6 @@
   </div>
 </div>
 
-<div style="width:100%;height:10px;background:whitesmoke"></div>
-
-<div (click)="showBeneficio = true"
-    style="width:100%;padding-left:20px;padding-right:15px;padding-top:20px;padding-bottom:20px;display:flex;align-items:center;justify-content:space-between">
-    <div style="display:flex;align-items:center">
-        <svg-icon src="assets/money-bag.svg"
-          [svgStyle]="{ 'width.px':22,'fill':'sandybrown', 'height.px':22, 'margin-right.px':5 }">
-        </svg-icon>
-      <div style="margin-left:20px;color:#999;font-size:15px;overflow:hidden;height:20px">
-          Si está insatisfecho con su estilo de cabello dentro de los 14 días posteriores, puede mejorarlo sin costo alguno.
-      </div>
-    </div>
-    <i class="fas fa-chevron-right" style="color:#bbb;font-size:18px"></i>
-  </div>
 
 
 <div style="width:100%;height:10px;background:whitesmoke"></div>
@@ -104,11 +94,13 @@
   <div (click)="openCupon()"
     style="width:100%;padding-top:15px;padding-bottom:10px;display:flex;align-items:center;justify-content:space-between">
     <div style="display:flex;align-items:center">
-      <img src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556492033/maqueta/sdfs4556764.jpg"
-        style="height:70px;width:70px;object-fit:cover">
+      <div style="height:70px;width:70px">
+        <img src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556492033/maqueta/sdfs4556764.jpg"
+          style="height:70px;width:70px;object-fit:cover">
+      </div>
       <div style="display:inline-block;margin-left:20px;color:#444">
         <div style="overflow:hidden;height:20px">
-            Barba completa + Limpieza facial completa + Corte de pelo profesional
+          Barba completa + Limpieza facial completa + Corte de pelo profesional
         </div>
         <div style="color:orange;font-size:15px">
           $14.900
@@ -116,10 +108,16 @@
             $17.500
           </span>
         </div>
-        <div
+        <!-- <div
           style="display:inline-block;margin-top:3px;padding-left:15px;padding-right:15px;border-radius:15px;background:darkorange">
-          <div style="color:white;font-size:16px">
-            Comprar ahora
+          <div style="color:white;font-size:16px">          
+            Reservar ahora
+          </div>
+        </div> -->
+        <div
+          style="display:inline-block;margin-top:3px;padding-left:15px;padding-right:15px;border-radius:15px;border:1px solid darkorange">
+          <div style="color:darkorange;font-size:16px">
+            Reservar ahora
           </div>
         </div>
       </div>
@@ -131,11 +129,20 @@
 
 <div style="width:100%;height:10px;background:whitesmoke"></div>
 
-
 <div style="padding:15px">
+<!-- <div style="padding:15px">
   <div style="font-size:16px;color:#555;font-weight:600">
     Comentarios (14)
-  </div>
+  </div> -->
+
+<div
+  style="display:flex;align-items:center;justify-content:space-between">
+    <div style="font-size:16px;color:#555;font-weight:600">
+      Comentarios (14)
+    </div>
+    <i class="fas fa-chevron-right" style="color:#bbb;font-size:18px"></i>
+</div>
+
 
   <div style="height:15px"></div>
 
@@ -170,67 +177,117 @@
   </div>
 
   <div style="margin-top:10px;display:flex">
-    <img src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556493295/maqueta/52599268_2138836749536414_2309583698095243264_n.jpg" style="height:70px;width:70px;object-fit:cover;margin-right:10px">
-    <img src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556493295/maqueta/52513914_2138836799536409_3769148541738418176_n.jpg" style="height:70px;width:70px;object-fit:cover;margin-right:10px">
+    <img
+      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556493295/maqueta/52599268_2138836749536414_2309583698095243264_n.jpg"
+      style="height:70px;width:70px;object-fit:cover;margin-right:10px">
+    <img
+      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556493295/maqueta/52513914_2138836799536409_3769148541738418176_n.jpg"
+      style="height:70px;width:70px;object-fit:cover;margin-right:10px">
   </div>
 
 
 
   <div style="margin-top:30px;display:flex;align-items:center">
-      <img src="https://www.useit.es/sites/default/files/featured-2_0.jpg"
-        style="border:1px solid #eee;height:35px;width:35px;border-radius:50%;object-fit:cover">
-      <div style="margin-left:5px">
-        <div style="color:#444;font-weight:500;font-size:14px">
-          Oscar Garcia
+    <img src="https://www.useit.es/sites/default/files/featured-2_0.jpg"
+      style="border:1px solid #eee;height:35px;width:35px;border-radius:50%;object-fit:cover">
+    <div style="margin-left:5px">
+      <div style="color:#444;font-weight:500;font-size:14px">
+        Oscar Garcia
+      </div>
+      <div style="display:flex;align-items:center">
+        <i class="fas fa-star" style="font-size:12px;color:darkorange;"></i>
+        <div style="margin-right:5px;color:darkorange;font-size:14px;margin-left:3px">
+          3
         </div>
-        <div style="display:flex;align-items:center">
-          <i class="fas fa-star" style="font-size:12px;color:darkorange;"></i>
-          <div style="margin-right:5px;color:darkorange;font-size:14px;margin-left:3px">
-            3
-          </div>
-          <div style="height:5px;width:5px;background:#bbb;margin-right:5px;border-radius:50%"></div>
-          <div style="color:#999;font-size:14px;margin-right:5px">
-            5 Reseñas
-          </div>
-          <div style="height:5px;width:5px;background:#bbb;margin-right:5px;border-radius:50%"></div>
-          <div style="color:#999;font-size:14px;margin-right:5px">
-            hace 3 horas
-          </div>
+        <div style="height:5px;width:5px;background:#bbb;margin-right:5px;border-radius:50%"></div>
+        <div style="color:#999;font-size:14px;margin-right:5px">
+          5 Reseñas
+        </div>
+        <div style="height:5px;width:5px;background:#bbb;margin-right:5px;border-radius:50%"></div>
+        <div style="color:#999;font-size:14px;margin-right:5px">
+          hace 3 horas
         </div>
       </div>
     </div>
-  
-    <div style="color:#555;font-size:14.5px">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, error! Error totam aut dolore, eligendi dolores
-      sint.
-    </div>
-  
-    <div style="margin-top:10px;display:flex">
-      <img src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556493216/maqueta/54432953_2158297734256982_7752093773718355968_n.jpg" style="height:70px;width:70px;object-fit:cover;margin-right:10px">
-      <!-- <img src="https://www.useit.es/sites/default/files/featured-2_0.jpg" style="height:70px;width:70px;object-fit:cover;margin-right:10px"> -->
-    </div>
+  </div>
+
+  <div style="color:#555;font-size:14.5px">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, error! Error totam aut dolore, eligendi dolores
+    sint.
+  </div>
+
+  <div style="margin-top:10px;display:flex">
+    <img
+      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556493216/maqueta/54432953_2158297734256982_7752093773718355968_n.jpg"
+      style="height:70px;width:70px;object-fit:cover;margin-right:10px">
+    <!-- <img src="https://www.useit.es/sites/default/files/featured-2_0.jpg" style="height:70px;width:70px;object-fit:cover;margin-right:10px"> -->
+  </div>
 
 
 
 
-    <div style="height:30px"></div>
+
+  <div style="height:30px"></div>
 
 </div>
 
 
 
 
-<div *ngIf="showBeneficio" style="z-index:999;position:fixed;top:0px;left:0px;width:100%;height:100%;background:rgba(31, 31, 31, 0.6)">
+<div style="width:100%;height:10px;background:whitesmoke"></div>
+
+<div style="padding-left:20px;padding-right:15px;padding-top:20px;padding-bottom:30px">
+
+
+<div (click)="showBeneficio = true"
+  style="width:100%;display:flex;align-items:center;justify-content:space-between">
+  <div style="display:flex;align-items:center">
+    <svg-icon src="assets/money-bag.svg"
+      [svgStyle]="{ 'width.px':22,'fill':'sandybrown', 'height.px':22, 'margin-right.px':5 }">
+    </svg-icon>
+    <div style="margin-left:20px;color:#999;font-size:16px;overflow:hidden;height:20px">
+      Si está insatisfecho con su estilo de cabello dentro de los 14 días posteriores, puede mejorarlo sin costo alguno.
+    </div>
+  </div>
+  <i class="fas fa-chevron-right" style="color:#bbb;font-size:18px"></i>
+</div>
+
+    <!-- <hr> -->
+    <div style="height:30px"></div>
+
+<div
+    style="width:100%;display:flex;align-items:center;justify-content:space-between">
+    <div>
+      <i class="fas fa-map-marker-alt" style="color:#bbb;font-size:18px"></i>
+      <span style="margin-left:30px;color:#999;font-size:16px">
+        Simon Bolivar 802
+      </span>
+    </div>
+    <i class="fas fa-chevron-right" style="color:#bbb;font-size:18px"></i>
+  </div>
+
+
+</div>
+
+
+  <div style="width:100%;height:10px;background:whitesmoke"></div>
+
+
+
+
+
+<div *ngIf="showBeneficio"
+  style="z-index:999;position:fixed;top:0px;left:0px;width:100%;height:100%;background:rgba(31, 31, 31, 0.6)">
   <div (click)="showBeneficio = false" style="height:70%"></div>
   <div style="height:30%;width:100%;background:white;padding:20px">
     <div style="width:100%;display:flex;align-items:center;justify-content:space-between">
       <div style="font-size:18px;color:#555;font-weight:500">
-          Beneficio
+        Beneficio
       </div>
       <i (click)="showBeneficio = false" class="fas fa-times" style="font-size:20px;color:#888"></i>
     </div>
     <div style="margin-top:15px;font-size:14.5px;color:#777">
-        Si está insatisfecho con su estilo de cabello dentro de los 14 días posteriores, puede mejorarlo sin costo alguno.
-          </div>
+      Si está insatisfecho con su estilo de cabello dentro de los 14 días posteriores, puede mejorarlo sin costo alguno.
+    </div>
   </div>
 </div>
