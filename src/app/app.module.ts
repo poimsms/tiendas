@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { TiendasModule } from './components/app-tiendas/tiendas.module';
+import { DeviceDetectorModule } from 'ngx-device-detector';
 
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,6 +17,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { RegistroComponent } from './components/tools/registro/registro.component';
 import { LoadingComponent } from './components/tools/loading/loading.component';
+import { DesktopComponent } from './components/desktop/desktop.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { LoadingComponent } from './components/tools/loading/loading.component';
     NavbarComponent,
     SectionsComponent,
     RegistroComponent,
-    LoadingComponent
+    LoadingComponent,
+    DesktopComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { LoadingComponent } from './components/tools/loading/loading.component';
     AppRoutingModule,
     HttpClientModule,
     AngularSvgIconModule,
+    DeviceDetectorModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

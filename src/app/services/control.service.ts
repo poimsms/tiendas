@@ -93,6 +93,8 @@ export class ControlService {
       this.showSections = true;      
     }
     if (page == 'tienda') {
+      console.log('pasoo hoola');
+
       this.tituloPage = 'Mi tienda';
       this.showArrow = false;
       this.showSections = false;      
@@ -104,12 +106,16 @@ export class ControlService {
       this.rightButtons = 'agenda';
     }
     if (page == 'contenido') {
+      console.log('pasoo contenido');
+      
       this.tituloPage = 'Atrás';
       this.showArrow = true;
       this.showSections = false;
-      this.back = 'home'; 
+      this.back = 'home';
     }
     if (page == 'oferta') {
+      console.log('pasooo oferta');
+      
       this.tituloPage = 'Atrás';
       this.showArrow = true;
       this.showSections = false;
@@ -125,6 +131,10 @@ export class ControlService {
     }
 
     if (page == 'cupones' || page == 'ventas') {
+      console.log('pasoo tienda');
+      console.log(page);
+      
+
       this.tituloPage = page;
       this.showArrow = true;
       this.showSections = false;

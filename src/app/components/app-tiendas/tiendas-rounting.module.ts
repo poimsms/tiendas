@@ -22,7 +22,7 @@ const routes: Routes = [
     { path: 'contenido', component: ContenidoComponent },
     { path: 'agenda', component: AgendaComponent },
     { path: 'agenda-config', component: AgendaConfigComponent },
-    { path: 'oferta', component: CuponComponent },
+    { path: 'duc/ofertas', component: CuponComponent },
     { path: 'formulario-inicio', component: FormularioInicioComponent },
     { path: 'tienda', component: TiendaComponent },
     { path: 'cupones', component: ProductosComponent },
@@ -30,7 +30,7 @@ const routes: Routes = [
     { path: 'nuevo', component: NuevoComponent },
 
     { path: 'm-principal', component: MPrincipalComponent },
-    { path: 'm-contenido', component: MContenidoComponent },
+    { path: 'duc', component: MContenidoComponent },
     { path: 'm-cupon', component: MCuponComponent },
 
 ];

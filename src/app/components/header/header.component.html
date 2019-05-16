@@ -1,29 +1,29 @@
 <div id="navbar" #contenedor class="container-fluid"
   style="transition: top 0.3s;z-index:100;position:fixed;top:0xp;left:0px;">
   <div class="row">
-    <div class="col-12" style="background:darkorange">
+    <div class="col-12" style="background:white">
       <div style="height:60px;width:100%;display:flex;align-items:center;justify-content:space-between;padding:15px">
         <div style="display:flex;align-items:center">
 
           <i *ngIf="!_control.showArrow" (click)="_control.isSidebar = true" class="fas fa-bars"
-            style="color:white;font-size:18px;margin-right:20px"></i>
+            style="color:#999;font-size:18px;margin-right:20px"></i>
           <i *ngIf="_control.showArrow" (click)="back()" class="fas fa-arrow-left"
-            style="color:white;font-size:18px;margin-right:20px"></i>
+            style="color:#999;font-size:18px;margin-right:20px"></i>
 
           <!-- <img src="assets/rattata.svg" style="width:30px"> -->
           <div *ngIf="_control.tituloPage != 'Atrás'"
-            style="color:white;font-size:22px;text-transform:capitalize;font-weight:500;">
+            style="color:#555;font-size:22px;text-transform:capitalize;font-weight:500;">
             {{_control.tituloPage}}
           </div>
           <div *ngIf="_control.tituloPage == 'Atrás'" (click)="back()"
-            style="color:white;font-size:20px;font-weight:500;">
+            style="color:#555;font-size:20px;font-weight:500;">
             Atrás
           </div>
         </div>
         <div *ngIf="_control.rightButtons == 'home'">
           <i (click)="addApp = !addApp" class="fas fa-plus-square"
-            style="color:white;font-size:18px;margin-right:20px"></i>
-          <i (click)="showLocation = true" class="fas fa-map-marker-alt" style="color:white;font-size:22px"></i>
+            style="color:#999;font-size:18px;margin-right:20px"></i>
+          <i (click)="showLocation = true" class="fas fa-map-marker-alt" style="color:lightsalmon;font-size:22px"></i>
         </div>
         <div *ngIf="_control.rightButtons == 'publicar'">
           <div
@@ -38,7 +38,7 @@
           <img *ngIf="false"
             src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556491438/maqueta/logotipo-barberia-retro_1415-688.jpg"
             style="border:3px solid #fff;height:35px;width:35px;border-radius:50%;object-fit:cover">
-          <div style="color:white;font-weight:600;font-size:18px">
+          <div style="color:#555;font-weight:600;font-size:18px">
             Barberia clásica DUC
           </div>
         </div>
@@ -55,17 +55,17 @@
 </div>
 
 
-<div *ngIf="addApp"
-  style="padding:20px;z-index:999;position:fixed;top:0px;left:0px;height:100%;width:100%;background:rgb(255, 140, 0, 0.9)">
-  <div style="margin-top:30%;">
-    <div style="font-size:18px;font-weight:600;color:white">
+<div *ngIf="addApp" (click)="addApp = !addApp"
+  style="padding:20px;z-index:999;position:fixed;top:0px;left:0px;height:100%;width:100%;background:rgba(31, 31, 31, 0.6);display:flex;align-items:center;justify-items:center">
+  <div style="background:white;padding:20px;border-radius:5px">
+    <div style="font-size:18px;font-weight:500;color:#555;width:100%;text-align:center">
       Agrega Joopiter a tu teléfono
     </div>
-    <div style="margin-top:5px;font-size:13px;font-weight:400;color:white">
+    <div style="margin-top:10px;font-size:14.5px;font-weight:400;color:#555">
       Búsca en Chrome la opción para "Agregar a la pantalla principal"
     </div>
-    <div (click)="addApp = !addApp"
-      style="font-size:14px;margin-top:20px;padding:6px;background:white;border-radius:2px;color:#555;padding-left:15px;padding-right:15px;display:inline-block">
+    <div 
+      style="font-size:14px;margin-top:30px;padding:6px;background:white;border-radius:2px;color:dodgerblue;width:100%;text-align:center">
       HECHO!
     </div>
   </div>

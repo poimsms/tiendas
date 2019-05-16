@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
   }
 
   openContent() {
-    this.router.navigateByUrl('/m-contenido');
+    this.router.navigateByUrl('/duc');
   }
 
   subir() {

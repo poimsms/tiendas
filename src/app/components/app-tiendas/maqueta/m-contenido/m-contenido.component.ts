@@ -30,7 +30,7 @@ export class MContenidoComponent implements OnInit {
   }
 
   openCupon() {
-    this.router.navigateByUrl('/oferta');
+    this.router.navigateByUrl('/duc/ofertas');
   }
 
 }
