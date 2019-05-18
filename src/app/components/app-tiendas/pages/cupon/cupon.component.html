@@ -60,35 +60,21 @@
 
 <div style="padding:15px;padding-top:25px;padding-bottom:35px">
 
-  <div style="width:100%;display:flex;align-items:center;justify-content:space-between">
+  <div (click)="showIncluye = !showIncluye "
+    style="width:100%;display:flex;align-items:center;justify-content:space-between">
     <div style="font-size:16px;color:#444;font-weight:600">
       Qué incluye
     </div>
-    <i class="fas fa-chevron-down" style="margin-right:10px;color:#bbb;font-size:16px"></i>
+    <i *ngIf="showIncluye" class="fas fa-chevron-up" style="margin-right:10px;color:#bbb;font-size:16px"></i>
+    <i *ngIf="!showIncluye" class="fas fa-chevron-down" style="margin-right:10px;color:#bbb;font-size:16px"></i>
   </div>
-  <div style="color:#666;width:100%;font-size:14.5px">
+  <div *ngIf="!showIncluye" style="color:#666;width:100%;font-size:14.5px">
     <div
       style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
     </div>
     Corte de cabello clásico o degrade
   </div>
-
-  <div style="margin-top:20px;width:100%;display:flex;align-items:center;justify-content:space-between">
-    <div style="font-size:16px;color:#444;font-weight:600">
-      Notas
-    </div>
-    <i class="fas fa-chevron-down" style="margin-right:10px;color:#bbb;font-size:16px"></i>
-  </div>
-  <div style="color:#666;width:100%;font-size:14.5px">
-    <div
-      style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
-    </div>
-    La sesión tiene una duración aproximada
-  </div>
-
-  <div *ngIf="false">
-
-
+  <div *ngIf="showIncluye">
     <div style="line-height: 1.7;color:#666;font-weight:350;margin-top:10px">
       <div style="width:100%;font-size:14.5px">
         <div
@@ -113,6 +99,49 @@
     </div>
   </div>
 
+
+
+  <div (click)="showNotas = !showNotas"
+    style="margin-top:20px;width:100%;display:flex;align-items:center;justify-content:space-between">
+    <div style="font-size:16px;color:#444;font-weight:600">
+      Notas
+    </div>
+    <i *ngIf="showNotas" class="fas fa-chevron-up" style="margin-right:10px;color:#bbb;font-size:16px"></i>
+    <i *ngIf="!showNotas" class="fas fa-chevron-down" style="margin-right:10px;color:#bbb;font-size:16px"></i>
+  </div>
+  <div *ngIf="!showNotas" style="color:#666;width:100%;font-size:14.5px">
+    <div
+      style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
+    </div>
+    La sesión tiene una duración aproximada
+  </div>
+
+  <div *ngIf="showNotas" style="padding:15px;padding-top:0px;padding-bottom:35px">
+    <div style="color:#666;font-weight:350;margin-top:10px">
+      <div style="width:100%;font-size:14.5px">
+        <div
+          style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
+        </div>
+        La sesión tiene una duración aproximada de 60 minutos.
+      </div>
+      <div style="width:100%;font-size:14.5px">
+        <div
+          style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
+        </div>
+        Reservas con al menos 24 horas de anticipación
+      </div>
+      <div style="width:100%;font-size:14.5px">
+        <div
+          style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
+        </div>
+        Validación mobile
+      </div>
+
+    </div>
+  </div>
+
+  <div style="height:100px"></div>
+
 </div>
 
 
@@ -120,7 +149,7 @@
 </div>
 
 
-<div style="width:100%;display:flex;justify-content:center;margin-bottom:50px;margin-top:20px">
+<div *ngIf="false" style="width:100%;display:flex;justify-content:center;margin-bottom:50px;margin-top:20px">
   <div
     style="font-weight:500;font-size:13px;color:white;background:darkorange;display:flex;align-items:center;padding:5px;padding-left:40px;padding-right:15px;border-radius:25px">
     COMPRAR AHORA
@@ -128,33 +157,30 @@
   </div>
 </div>
 
-<div *ngIf="false" style="padding:15px;padding-top:25px;padding-bottom:35px">
-
-  <div style="font-size:16px;color:#444;font-weight:600">
-    Notas
+<div *ngIf="false"
+  style="border-top:1px solid #eee;background:white;position:fixed;bottom:0px;left:0px;width:100%;height:70px;display:flex;align-items:center;justify-content:space-between;padding-left:15px;padding-right:15px">
+  <div style="font-size:20px;color:#444">
+    $15.000
   </div>
-  <div style="color:#666;font-weight:350;margin-top:10px">
-    <div style="width:100%;font-size:14.5px">
-      <div
-        style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
-      </div>
-      La sesión tiene una duración aproximada de 60 minutos.
-    </div>
-    <div style="width:100%;font-size:14.5px">
-      <div
-        style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
-      </div>
-      Reservas con al menos 24 horas de anticipación
-    </div>
-    <div style="width:100%;font-size:14.5px">
-      <div
-        style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
-      </div>
-      Validación mobile
-    </div>
-
+  <div
+    style="font-weight:500;font-size:13px;color:white;background:darkorange;display:flex;align-items:center;padding:5px;padding-left:40px;padding-right:15px;border-radius:25px">
+    COMPRAR AHORA
+    <i class="fas fa-chevron-circle-right" style="color:white;font-size:34px;margin-left:10px"></i>
   </div>
 </div>
+
+<div *ngIf="true"
+  style="border-top:1px solid #eee;background:white;position:fixed;bottom:0px;left:0px;width:100%;display:flex;align-items:center;justify-content:space-between">
+  <div>
+    <span style="font-size:15px;color:#555;margin-left:15px;margin-right:5px">Total:</span>
+    <span style="color:#ff6633;font-size:18px;font-weight:500">$15.000</span>    
+  </div>
+  <div style="color:white;font-weight:500;font-size:18px;padding:6px;padding-left:25px;padding-right:25px;background:orange">
+    Comprar
+  </div>
+</div>
+
+
 
 
 <div style="width:100%;height:10px;background:whitesmoke">

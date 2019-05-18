@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class AgendaService {
 
   // apiURL = 'http://localhost:3000';
 
-  
+
   // apiURL = 'https://joopiter.herokuapp.com';
 
   apiURL = 'https://joopiterweb.com';
@@ -19,7 +20,62 @@ export class AgendaService {
   fechas = [];
   ultimaFecha: string;
 
+  diasSubject = new Subject<any>();
+
+
   constructor(public http: HttpClient) { }
+
+  intercambioData(data) {
+
+    this.dias = data;
+  }
+
+  activarDia(index) {
+
+    this.dias.forEach(dia => {
+      dia.isActive = false;
+    });
+
+    this.dias[index].isActive = !this.dias[index].isActive;
+  }
+
+  activarHora(indexDia, indexHora, isActual) {
+
+    if (!isActual) {
+      return;
+    }
+
+    if (indexHora == 0) {
+      return;
+    }
+
+    this.dias[indexDia].horas[indexHora].isActive = !this.dias[indexDia].horas[indexHora].isActive;
+  }
+
+  fetchDias(tiendaID) {
+
+    this.obtenerFechas().then((res: any) => {
+
+      let promesas = [];
+      this.ultimaFecha = res.fechas[5];
+
+      res.fechas.forEach(fecha => {
+        promesas.push(this.buscarDia(tiendaID, fecha));
+      });
+
+      Promise.all(promesas).then(dias => {
+
+        this.compararConTiempoServidor(dias)
+          .then((dataCorregida: any) => {
+            this.dias = dataCorregida;
+            this.dias[1].isActive = true;
+            this.diasSubject.next(true);
+          });
+      });
+
+    });
+  }
+
 
   construirDias(tiendaID) {
 
@@ -28,18 +84,18 @@ export class AgendaService {
 
         let promesas = [];
         this.ultimaFecha = res.fechas[5];
-        console.log(res.fechas);
 
-        res.fechas.forEach(fecha => {          
+        res.fechas.forEach(fecha => {
           promesas.push(this.buscarDia(tiendaID, fecha));
         });
 
         Promise.all(promesas).then(dias => {
-          console.log(dias);
 
           this.compararConTiempoServidor(dias)
-            .then(dataCorregida => {              
-              resolve(dataCorregida);
+            .then((dataCorregida: any) => {
+              this.dias = dataCorregida;
+              this.dias[0].isActive = true;
+              resolve();
             });
         });
 
@@ -49,8 +105,6 @@ export class AgendaService {
   }
 
   compararConTiempoServidor(dias) {
-    console.log(dias);
-    
     return new Promise((resolve, reject) => {
       let data = [];
       this.obtenerTiempoServidor()

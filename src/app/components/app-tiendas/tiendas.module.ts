@@ -20,6 +20,7 @@ import { MCuponComponent } from './maqueta/m-cupon/m-cupon.component';
 import { NuevoComponent } from './pages/nuevo/nuevo.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { VentasComponent } from './pages/ventas/ventas.component';
+import { AgendaBuyComponent } from './pages/agenda-buy/agenda-buy.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { VentasComponent } from './pages/ventas/ventas.component';
     VentasComponent,
     MPrincipalComponent,
     MContenidoComponent,
-    MCuponComponent
+    MCuponComponent,
+    AgendaBuyComponent
   ],
   imports: [
     CommonModule,

@@ -10,14 +10,26 @@ import { ControlService } from 'src/app/services/control.service';
 export class NuevoComponent implements OnInit {
 
   isAgenda = false;
-  
+  isPromo = false;
+  isPrecio = true;
+
   constructor(
     private router: Router,
     private _control: ControlService
-    ) { }
+  ) { }
 
   ngOnInit() {
     this._control.setPage('nuevo');
+  }
+
+  togglePrecio(action) {
+    if (action == 'precio') {
+      this.isPrecio = true;
+      this.isPromo = false;
+    } else {
+      this.isPrecio = false;
+      this.isPromo = true;
+    }
   }
 
 }

@@ -1,101 +1,54 @@
-<div style="height:70px"></div>
+<div style="height:180px"></div>
 
 
-<div *ngIf="false"
-  style="padding:3px;padding-bottom:0px;padding-left:20px;display:flex;align-items:center;flex-wrap:wrap">
-
-  <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
-    <div style="border-radius:3px;height:20px;width:20px;background:white;border:1px solid #bbb;margin-right:5px">
-    </div>
-    <div style="color:#777">
-      No asignada
-    </div>
-  </div>
-
-  <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
-    <div style="border-radius:3px;height:20px;width:20px;background:gold;margin-right:5px"></div>
-    <div style="color:#777">
-      Disponible para reservar
-    </div>
-  </div>
-
-  <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
-    <div style="border-radius:3px;height:20px;width:20px;background:salmon;margin-right:5px"></div>
-    <div style="color:#777">
-      Hora agendada
-    </div>
-  </div>
-
-</div>
-
-
-
-<div class="scrolling-wrapper"
-  style="touch-action: manipulation;background:white;position:fixed;top:0px;padding-top:70px;left:0px">
-  <div *ngFor="let dia of dias;let i = index" (click)="activarDia(i)" class="card"
-    [ngClass]="{'activeDay': dia.isActive}">
-    <div style="width:100%;text-align:center;font-size:22px;">
-      {{dia.dia.nombre | slice:0:3}}
-    </div>
-    <div style="width:100%;text-align:center;;">
-      {{dia.dia.numero}}
-    </div>
-  </div>
-  <hr>
-</div>
-
-
-<div style="height:130px"></div>
-
-
-
-<div *ngIf="false"
-  style="padding:3px;padding-bottom:0px;padding-left:20px;display:flex;align-items:center;flex-wrap:wrap">
-
-  <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
-      <i  class="fas fa-lock" style="margin-right:5px;font-size:21px;color:#bbb"></i>
-
-    <div style="color:#777">
-      Bloqueado
-    </div>
-  </div>
-
-  <!-- <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
-    <div style="border-radius:3px;height:20px;width:20px;background:gold;margin-right:5px"></div>
-    <div style="color:#777">
-      Disponible para reservar
-    </div>
-  </div> -->
-
-  <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
-      <i class="fas fa-check" style="margin-right:5px;font-size:23px;color:gold"></i>
-
-    <div style="color:#777">
-      Agregado
-    </div>
-  </div>
-
-</div>
-
-
-
-
-
-<div *ngFor="let dia of dias; let i = index" style="touch-action: manipulation">
+<div *ngFor="let dia of _agenda.dias; let i = index" style="touch-action: manipulation">
 
   <div *ngIf="dia.isActive">
 
     <div *ngFor="let hora of dia.horas; let j = index">
 
-      <div (click)="activarHora(i, j, dia.isActual)" style="margin-left:20px">
+      <div (click)="_agenda.activarHora(i, j, dia.isActual)" style="margin-left:20px">
 
         <div *ngIf="dia.isActual && j != 0"
           style="height:55px;margin-left:45px;display:flex;align-items:center;justify-content:center">
-          <i *ngIf="hora.isActive" class="fas fa-check" style="margin-top:10px;margin-right:20px;font-size:23px;color:gold"></i>
+          <i *ngIf="hora.isActive" class="fas fa-check"
+            style="margin-top:10px;margin-right:20px;font-size:23px;color:gold"></i>
         </div>
-        <div *ngIf="!dia.isActual && j != 0" style="height:55px;margin-left:45px;display:flex;align-items:center;justify-content:center">
-            <i  class="fas fa-lock" style="margin-top:10px;font-size:21px;color:#bbb"></i>
+        <div *ngIf="!dia.isActual && j != 0 && j !=3 && j!=4"
+          style="height:55px;margin-left:45px;display:flex;align-items:center;justify-content:center">
+          <i class="fas fa-lock" style="margin-top:10px;font-size:21px;color:#bbb"></i>
         </div>
+
+        <div *ngIf="!dia.isActual && j == 3" style="height:55px;margin-left:45px;">
+          <div (click)="openCompra()"
+            style="padding:3px;border:0px solid #eee;border-radius:5px;margin-right:15px;margin-top:20px;display:flex;align-items:center">
+            <div style="height:40px;width:40px;">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9U4duHowuf6m2cgLZ9YcN_pqqvzdIUE9o7m02prVoupzS0sKV"
+                style="height:40px;width:40px;border-radius:10px;object-fit:cover">
+            </div>
+            <div style="overflow:hidden;height:50px;margin-left:10px;margin-right:15px">
+              <span style="font-weight:500">Daniela Ruiz</span> ha comprado
+              Mechas + Masaje + Tiente
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="!dia.isActual && j == 4" style="height:55px;margin-left:45px;">
+          <div (click)="openCompra()"
+            style="padding:3px;border:0px solid #eee;border-radius:5px;margin-right:15px;margin-top:20px;display:flex;align-items:center">
+            <div style="height:40px;width:40px;">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP1UB8WxQh2-shDlADkZ-0xMnm5mc99RjakbPQAqAHP60Y4NVp"
+                style="height:40px;width:40px;border-radius:10px;object-fit:cover">
+            </div>
+            <div style="overflow:hidden;height:50px;margin-left:10px;margin-right:15px">
+              <span style="font-weight:500">Oscar Garcia</span> ha comprado
+              Tatuaje + Cafe + Corte de pelo
+            </div>
+          </div>
+        </div>
+
         <div *ngIf="j == 0" style="background:white;height:55px;margin-left:45px">
         </div>
 
@@ -105,11 +58,9 @@
           </div>
 
           <div style="flex-grow: 1">
-            <div *ngIf="dia.isActual"
-              style="margin-top:0px;margin-left:10px;height:21px;border-bottom:2px solid #eee">
+            <div *ngIf="dia.isActual" style="margin-top:0px;margin-left:10px;height:21px;border-bottom:2px solid #eee">
             </div>
-            <div *ngIf="!dia.isActual"
-              style="margin-top:0px;margin-left:10px;height:21px;border-bottom:2px solid #eee">
+            <div *ngIf="!dia.isActual" style="margin-top:0px;margin-left:10px;height:21px;border-bottom:2px solid #eee">
             </div>
           </div>
         </div>
@@ -117,6 +68,65 @@
     </div>
   </div>
 </div>
+
+
+
+
+<div *ngIf="showAdd" (click)="showAdd = false"
+  style="position:fixed;z-index:999;left:0px;top:0px;width:100%;height:100%;background:rgba(31, 31, 31, 0.6);display:flex;align-items:center;justify-content:center">
+  <div style="width:85%;border-radius:3px;padding:30px;background:white;">
+    <div style="font-size:22px;font-weight:400;color:#333;width:100%;text-align:center">
+      Agendar una hora
+    </div>
+
+    <div style="margin-top:10px;font-size:15px;font-weight:400;color:#444">
+      Búsca en tu agenda una hora activa
+    </div>
+
+    <div style="font-size:16px;margin-top:30px;display:flex;align-items:center">
+      <div style="width:70px;margin-right:10px;color:#666">
+        Día
+      </div>
+      <div style="display:flex;align-items:center">
+        <i class="fas fa-caret-left" style="font-size:28px;color:#bbb;margin-right:15px"></i>
+        <div style="margin-right:15px;border-bottom:0px solid #444;padding-left:5px;padding-right:5px;color:#999">
+          Jue 17
+        </div>
+        <i class="fas fa-caret-right" style="font-size:28px;color:#bbb"></i>
+      </div>
+    </div>
+
+    <div style="font-size:16px;margin-top:30px;display:flex;align-items:center">
+      <div style="width:70px;margin-right:10px;color:#666">
+        Hora
+      </div>
+      <div style="display:flex;align-items:center">
+        <i class="fas fa-caret-left" style="font-size:28px;color:#bbb;margin-right:15px"></i>
+        <div style="margin-right:21px;border-bottom:0px solid #444;padding-left:5px;padding-right:5px;color:#999">
+          10:00
+        </div>
+        <i class="fas fa-caret-right" style="font-size:28px;color:#bbb"></i>
+      </div>
+    </div>
+
+    <div style="width:100%;color:dodgerblue;text-align:right;margin-top:45px;font-size:16px">
+      AGREGAR
+    </div>
+
+  </div>
+</div>
+
+<div style="position:fixed;bottom:30px;right:20px">
+  <div (click)="showAdd = true"
+    style="width:50px;height:50px;border-radius:50%;background:darkorange;display:flex;align-items:center;justify-content:center">
+    <i class="fas fa-plus" style="font-size:22px;color:white"></i>
+  </div>
+</div>
+
+
+
+
+
 
 
 

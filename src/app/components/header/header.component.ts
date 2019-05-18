@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
 
   addApp = false;
   showLocation = false;
+  showMenu = false;
 
   constructor(
     private router: Router,
@@ -46,18 +47,17 @@ isFacebookApp() {
     if ( this._control.back == 'home' ) {
       this.router.navigateByUrl('/home');
       this._control.activarSeccion('home');
-      this._control.showArrow = false;
-      this._control.tituloPage = 'joopiter';
     }
     if ( this._control.back == 'tienda' ) {
       this.router.navigateByUrl('/tienda');
-      this._control.showArrow = true;
-      this._control.tituloPage = 'Mi tienda';
     }
     if ( this._control.back == 'contenido' ) {
       this.router.navigateByUrl('/duc');
       this._control.showArrow = true;
       this._control.tituloPage = '';
+    }
+    if ( this._control.back == 'agenda' ) {
+      this.router.navigateByUrl('/agenda');
     }
   }
 

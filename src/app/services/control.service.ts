@@ -93,29 +93,31 @@ export class ControlService {
       this.showSections = true;      
     }
     if (page == 'tienda') {
-      console.log('pasoo hoola');
-
       this.tituloPage = 'Mi tienda';
       this.showArrow = false;
-      this.showSections = false;      
+      this.showSections = false;
+      this.rightButtons = 'tienda';
     }   
     if (page == 'agenda') {
-      this.tituloPage = 'Mi agenda';
+      this.tituloPage = 'Agenda';
       this.showArrow = false;
       this.showSections = false;
       this.rightButtons = 'agenda';
     }
-    if (page == 'contenido') {
-      console.log('pasoo contenido');
-      
+    if (page == 'agenda-compra') {
+      this.tituloPage = 'Atrás';
+      this.showArrow = true;
+      this.showSections = false;
+      this.rightButtons = 'nada';
+      this.back = 'agenda';
+    }
+    if (page == 'contenido') {      
       this.tituloPage = 'Atrás';
       this.showArrow = true;
       this.showSections = false;
       this.back = 'home';
     }
-    if (page == 'oferta') {
-      console.log('pasooo oferta');
-      
+    if (page == 'oferta') {      
       this.tituloPage = 'Atrás';
       this.showArrow = true;
       this.showSections = false;
@@ -127,18 +129,15 @@ export class ControlService {
       this.showArrow = true;
       this.rightButtons = 'publicar';
       this.showSections = false;
-      this.back = 'tienda';    
+      this.back = 'tienda';
     }
 
-    if (page == 'cupones' || page == 'ventas') {
-      console.log('pasoo tienda');
-      console.log(page);
-      
-
+    if (page == 'cupones' || page == 'ventas') {     
       this.tituloPage = page;
       this.showArrow = true;
       this.showSections = false;
-      this.back = 'tienda';    
+      this.back = 'tienda';
+      this.rightButtons = 'tienda';    
     }
 
   }

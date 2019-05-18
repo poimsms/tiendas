@@ -27,12 +27,12 @@
         </div>
         <div *ngIf="_control.rightButtons == 'publicar'">
           <div
-            style="color:white;padding:3px;padding-left:10px;padding-right:10px;border:1px solid #fff;border-radius:2px;font-size:16px;font-weight:500">
+            style="color:dodgerblue;padding:3px;padding-left:10px;padding-right:10px;border:1px solid dodgerblue;border-radius:10px;font-size:16px">
             Publicar
           </div>
         </div>
         <div *ngIf="_control.rightButtons == 'agenda'">
-          <i class="fas fa-cog" style="color:white;font-size:22px"></i>
+          <i (click)="showMenu = true" class="fas fa-ellipsis-v" style="color:#bbb;font-size:20px"></i>
         </div>
         <div *ngIf="_control.rightButtons == 'oferta'">
           <img *ngIf="false"
@@ -51,6 +51,28 @@
 
     </div>
 
+    <div *ngIf="_control.rightButtons == 'agenda'" class="col-12" style="background:white;border-bottom:1px solid #eee">
+
+      <app-agenda-tooltip></app-agenda-tooltip>
+
+    </div>
+
+    <div *ngIf="_control.rightButtons == 'agenda'"
+      style="width:100%;background:whitesmoke;padding:3px;padding-bottom:0px;padding-left:20px;display:flex;align-items:center;flex-wrap:wrap">
+      <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
+        <i class="fas fa-lock" style="margin-right:5px;font-size:18px;color:#bbb"></i>
+        <div style="font-size:14.5px;color:#777">
+          Bloqueado
+        </div>
+      </div>
+      <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
+        <i class="fas fa-check" style="margin-right:5px;font-size:18px;color:#bbb"></i>
+        <div style="font-size:14.5px;color:#777">
+          Activo
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -64,7 +86,7 @@
     <div style="margin-top:10px;font-size:14.5px;font-weight:400;color:#555">
       Búsca en Chrome la opción para "Agregar a la pantalla principal"
     </div>
-    <div 
+    <div
       style="font-size:14px;margin-top:30px;padding:6px;background:white;border-radius:2px;color:dodgerblue;width:100%;text-align:center">
       HECHO!
     </div>
@@ -96,3 +118,25 @@
 
 
 <app-loading *ngIf="_control.isLoading"></app-loading>
+
+
+
+
+<div *ngIf="showMenu" (click)="showMenu = false"
+  style="position:fixed;z-index:999;left:0px;top:0px;width:100%;height:100%;background:rgba(31, 31, 31, 0.5);display:flex;justify-content:flex-end;align-items:flex-start">
+  <div
+    style="width:75%;margin-top:50px;margin-right:20px;border-radius:3px;padding:20px;padding-right:0px;background:white;">
+    <div style="font-size:19px;font-weight:400;color:#444">
+      Ajustar franjas de tiempo
+    </div>
+    <hr>
+    <div style="margin-top:20px;font-size:19px;font-weight:400;color:#444">
+      Definir inicio
+    </div>
+    <hr>
+    <div style="margin-top:20px;font-size:19px;font-weight:400;color:#444">
+      Tiempo de antelación
+    </div>
+
+  </div>
+</div>

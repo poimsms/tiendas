@@ -8,6 +8,9 @@ import { ControlService } from 'src/app/services/control.service';
 })
 export class CuponComponent implements OnInit {
 
+  showIncluye = true;
+  showNotas = false;
+
   constructor(private _control: ControlService) { }
 
   ngOnInit() {

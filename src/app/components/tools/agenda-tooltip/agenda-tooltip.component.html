@@ -1,0 +1,88 @@
+<!-- <div class="scrolling-wrapper" style="touch-action: manipulation;background:white">
+  <div *ngFor="let dia of _agenda.dias;let i = index" (click)="_agenda.activarDia(i)" class="card"
+    [ngClass]="{'activeDay': dia.isActive}">
+    <div style="width:100%;text-align:center;font-size:20px;">
+      {{dia.dia.nombre | slice:0:3}}
+    </div>
+    <div style="width:100%;text-align:center;;">
+      {{dia.dia.numero}}
+    </div>
+    <div style="width:100%;text-align:center">
+      <div style="display:inline-block;height:6px;width:6px;border-radius:50%;background:yellowgreen"></div>
+    </div>
+  </div>
+</div> -->
+
+
+<div style="background:white;color:darkorange;font-size:14px;text-align:center;width:100%">
+    <span style="font-weight:500">Mayo</span> - 2019
+  </div>
+
+
+<div class="scrolling-wrapper" style="touch-action: manipulation;background:white">
+    <div *ngFor="let dia of _agenda.dias;let i = index" (click)="_agenda.activarDia(i)" class="card"
+      >
+      <div style="width:100%;text-align:center;font-size:20px;">
+        {{dia.dia.nombre | slice:0:3}}
+      </div>
+      <div style="width:100%;padding-left:15px">
+        <div [ngClass]="{'activeDay2': dia.isActive}" style="height:30px;width:30px;display:flex;align-items:center;justify-content:center;border-radius:50%">
+            {{dia.dia.numero}}
+        </div>
+      </div>
+      <!-- <div style="width:100%;text-align:center">
+        <div  [ngClass]="{'activeDot': i == 0}" style="display:inline-block;height:8px;width:8px;border-radius:50%;"></div>
+      </div> -->
+    </div>
+  </div>
+
+
+
+<div style="height:10px"></div>
+
+<div *ngIf="false"
+  style="padding:3px;padding-bottom:0px;padding-left:20px;display:flex;align-items:center;flex-wrap:wrap">
+  <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
+    <i class="fas fa-lock" style="margin-right:5px;font-size:21px;color:#bbb"></i>
+    <div style="color:#777">
+      Bloqueado
+    </div>
+  </div>
+  <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
+    <i class="fas fa-check" style="margin-right:5px;font-size:23px;color:gold"></i>
+    <div style="color:#777">
+      Agregado
+    </div>
+  </div>
+</div>
+
+
+<!-- <div style="background:white;color:#666;font-size:14px;text-align:center;width:100%">
+  Nov - 2019
+</div> -->
+
+
+<div *ngIf="false"
+  style="background:whitesmoke;padding:3px;padding-bottom:0px;padding-left:20px;display:flex;align-items:center;flex-wrap:wrap">
+  <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
+    <i class="fas fa-lock" style="margin-right:5px;font-size:18px;color:#bbb"></i>
+    <div style="font-size:14.5px;color:#777">
+      Bloqueado
+    </div>
+  </div>
+  <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
+    <i class="fas fa-check" style="margin-right:5px;font-size:18px;color:gold"></i>
+    <div style="font-size:14.5px;color:#777">
+      Agregado
+    </div>
+  </div>
+</div>
+
+
+<!-- <div style="position:fixed;bottom:30px;right:20px">
+
+  <div style="width:50px;height:50px;border-radius:50%;background:darkorange;display:flex;align-items:center;justify-content:center">
+      <i class="fas fa-plus" style="font-size:22px;color:white"></i>
+  </div>
+
+</div> -->

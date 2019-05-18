@@ -18,6 +18,7 @@ import { environment } from '../environments/environment';
 import { RegistroComponent } from './components/tools/registro/registro.component';
 import { LoadingComponent } from './components/tools/loading/loading.component';
 import { DesktopComponent } from './components/desktop/desktop.component';
+import { AgendaTooltipComponent } from './components/tools/agenda-tooltip/agenda-tooltip.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DesktopComponent } from './components/desktop/desktop.component';
     SectionsComponent,
     RegistroComponent,
     LoadingComponent,
-    DesktopComponent
+    DesktopComponent,
+    AgendaTooltipComponent
   ],
   imports: [
     BrowserModule,

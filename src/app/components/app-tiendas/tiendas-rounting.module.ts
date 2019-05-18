@@ -15,6 +15,7 @@ import { MCuponComponent } from './maqueta/m-cupon/m-cupon.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { VentasComponent } from './pages/ventas/ventas.component';
 import { NuevoComponent } from './pages/nuevo/nuevo.component';
+import { AgendaBuyComponent } from './pages/agenda-buy/agenda-buy.component';
 
 const routes: Routes = [
 
@@ -28,6 +29,7 @@ const routes: Routes = [
     { path: 'cupones', component: ProductosComponent },
     { path: 'ventas', component: VentasComponent },
     { path: 'nuevo', component: NuevoComponent },
+    { path: 'agenda/compra', component: AgendaBuyComponent },
 
     { path: 'm-principal', component: MPrincipalComponent },
     { path: 'duc', component: MContenidoComponent },
