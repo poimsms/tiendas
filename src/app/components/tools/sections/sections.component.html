@@ -1,42 +1,121 @@
 <div style="height:10px"></div>
 
 <div *ngIf="_control.isHome" class="row">
-  <div class="col-4">
-    <div (click)="openSeccion('belleza')" style="width:100%;text-align:center">
-      <!-- <i class="fas fa-female" style="font-size:22px;color:lightpink"></i> -->
-      <svg-icon src="assets/hair.svg"
-      [svgStyle]="{ 'width.px':25,'fill':'lightpink', 'height.px':25}">
-    </svg-icon>
-      <div style="font-size:14px;color:#555;width:100%;text-align:center">
-        Belleza
-      </div>
+
+  <!-- <div class="col-4">
+    <div style="width:100%;text-align:center;padding:5px;border-radius:5px;border:0px solid #eee">
+        <div style="font-weight:700;font-size:13px;color:#444;width:100%;text-align:center">
+            BELLEZA
+            <div style="font-weight:400;margin-top:-2px;font-size:13px;color:#888">
+              Tiendas
+            </div>
+          </div>
+      <svg-icon src="assets/hair.svg" [svgStyle]="{ 'width.px':20,'fill':'lightpink', 'height.px':20}">
+      </svg-icon>      
+    </div>
+  </div> -->
+  <div class="col-3">
+    <div (click)="toggle('belleza')" style="width:100%;padding:5px">
+       <div style="margin-left:4px;border-radius:50%;width:40px;height:40px;display:flex;justify-content:center;align-items:center;background:pink">
+          <i class="fas fa-heart" style="font-size:18px;color:white"></i>
+       </div>
+       <div style="margin-top:2px;font-size:14px;color:#666;width:100%;text-align:center">
+          Belleza
+        </div>     
     </div>
   </div>
-  <div class="col-4">
-    <div (click)="openSeccion('estilo')" style="width:100%;text-align:center">
-      <i class="fas fa-cut" style="font-size:22px;color:coral"></i>
-      <div style="font-size:14px;color:#555;width:100%;text-align:center">
-        Estilo
+
+  <div class="col-3">
+      <div (click)="toggle('estilo')" style="width:100%;text-align:center;padding:5px;border-radius:5px;border:0px solid #eee">
+         <div style="margin-left:5px;border-radius:50%;width:40px;height:40px;display:flex;justify-content:center;align-items:center;background:lightsalmon">
+            <i class="fas fa-cut" style="font-size:18px;color:white"></i>
+         </div>
+         <div style="margin-top:2px;font-size:14px;color:#666;width:100%;text-align:center">
+            Estilo
+          </div>     
       </div>
     </div>
-  </div>
-  <div class="col-4">
-    <div (click)="openSeccion('mascotas')" style="width:100%;text-align:center">
-      <i class="fas fa-dog" style="font-size:22px;color:slateblue"></i>
-      <div style="font-size:14px;color:#555;width:100%;text-align:center">
-        Mascotas
+
+    <div class="col-3">
+        <div (click)="toggle('mascotas')" style="width:100%;text-align:center;padding:5px;border-radius:5px;border:0px solid #eee">
+           <div style="margin-left:8px;border-radius:50%;width:40px;height:40px;display:flex;justify-content:center;align-items:center;background:lightblue">
+              <i class="fas fa-dog" style="font-size:18px;color:white"></i>
+           </div>
+           <div style="margin-top:2px;font-size:14px;color:#666;width:100%;text-align:center">
+              Mascotas
+            </div>     
+        </div>
       </div>
-    </div>
-  </div>
+
+      <div class="col-3">
+          <div (click)="toggle('recreacion')" style="width:100%;text-align:center;padding:5px;border-radius:5px;border:0px solid #eee">
+             <div style="margin-left:8px;border-radius:50%;width:40px;height:40px;display:flex;justify-content:center;align-items:center;background:lightgray">
+                <i class="fas fa-ship" style="font-size:18px;color:white"></i>
+             </div>
+             <div style="margin-top:2px;font-size:14px;color:#666;width:100%;text-align:center">
+                Recreación
+              </div>     
+          </div>
+        </div>
+
+  <div style="height:15px;width:100%"></div>
+
+
+
+
+
 </div>
 
 
 
-<div *ngIf="_control.isBelleza" class="row">
+
+
+<div *ngIf="showEstilo" class="row">
+
+    <div class="col-3">
+        <div (click)="_control.categoria('uñas')" style="width:100%;text-align:center">
+          <svg-icon src="assets/nail.svg" [svgStyle]="{ 'width.px':25,'fill':'lightsalmon', 'height.px':25}">
+          </svg-icon>
+          <div style="font-size:14px;color:#555;width:100%;text-align:center">
+            Uñas
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div (click)="_control.categoria('cabello')" style="width:100%;text-align:center">
+          <svg-icon src="assets/woman-hair.svg" [svgStyle]="{ 'width.px':25,'fill':'salmon', 'height.px':25}">
+          </svg-icon>
+          <div style="font-size:14px;color:#555;width:100%;text-align:center">
+            Cabello
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div (click)="_control.categoria('barbería')" style="width:100%;text-align:center">
+          <svg-icon src="assets/blade.svg" [svgStyle]="{ 'width.px':25,'fill':'dodgerblue', 'height.px':25}">
+          </svg-icon>
+          <div style="font-size:14px;color:#555;width:100%;text-align:center">
+            Barbería
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div (click)="_control.categoria('tattoo')" style="width:100%;text-align:center">
+          <svg-icon src="assets/rock.svg" [svgStyle]="{ 'width.px':25,'fill':'black', 'height.px':25}">
+          </svg-icon>
+          <div style="font-size:14px;color:#555;width:100%;text-align:center">
+            Tattoo
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+<div *ngIf="showBelleza" class="row">
   <div class="col-3">
     <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
-        <svg-icon src="assets/face-mask.svg"
-        [svgStyle]="{ 'width.px':25,'fill':'lightsalmon', 'height.px':25}">
+      <svg-icon src="assets/face-mask.svg" [svgStyle]="{ 'width.px':25,'fill':'lightsalmon', 'height.px':25}">
       </svg-icon>
       <div style="font-size:14px;color:#555;width:100%;text-align:center">
         Rostro
@@ -45,8 +124,7 @@
   </div>
   <div class="col-3">
     <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
-        <svg-icon src="assets/wax.svg"
-        [svgStyle]="{ 'width.px':25,'fill':'orange', 'height.px':25}">
+      <svg-icon src="assets/wax.svg" [svgStyle]="{ 'width.px':25,'fill':'orange', 'height.px':25}">
       </svg-icon>
       <div style="font-size:14px;color:#555;width:100%;text-align:center">
         Piel
@@ -55,8 +133,7 @@
   </div>
   <div class="col-3">
     <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
-        <svg-icon src="assets/massage-spa.svg"
-        [svgStyle]="{ 'width.px':25,'fill':'gold', 'height.px':25}">
+      <svg-icon src="assets/massage-spa.svg" [svgStyle]="{ 'width.px':25,'fill':'gold', 'height.px':25}">
       </svg-icon>
       <div style="font-size:14px;color:#555;width:100%;text-align:center">
         Masaje
@@ -65,8 +142,7 @@
   </div>
   <div class="col-3">
     <div (click)="_control.categoria('rostro')" style="width:100%;text-align:center">
-        <svg-icon src="assets/barefoot.svg"
-        [svgStyle]="{ 'width.px':25,'fill':'orange', 'height.px':25}">
+      <svg-icon src="assets/barefoot.svg" [svgStyle]="{ 'width.px':25,'fill':'orange', 'height.px':25}">
       </svg-icon>
       <div style="font-size:14px;color:#555;width:100%;text-align:center">
         Pies
@@ -77,11 +153,10 @@
 
 
 
-<div *ngIf="_control.isEstilo" class="row">
+<div *ngIf="false" class="row">
   <div class="col-3">
     <div (click)="_control.categoria('uñas')" style="width:100%;text-align:center">
-        <svg-icon src="assets/nail.svg"
-        [svgStyle]="{ 'width.px':25,'fill':'lightsalmon', 'height.px':25}">
+      <svg-icon src="assets/nail.svg" [svgStyle]="{ 'width.px':25,'fill':'lightsalmon', 'height.px':25}">
       </svg-icon>
       <div style="font-size:14px;color:#555;width:100%;text-align:center">
         Uñas
@@ -90,8 +165,7 @@
   </div>
   <div class="col-3">
     <div (click)="_control.categoria('cabello')" style="width:100%;text-align:center">
-        <svg-icon src="assets/woman-hair.svg"
-        [svgStyle]="{ 'width.px':25,'fill':'salmon', 'height.px':25}">
+      <svg-icon src="assets/woman-hair.svg" [svgStyle]="{ 'width.px':25,'fill':'salmon', 'height.px':25}">
       </svg-icon>
       <div style="font-size:14px;color:#555;width:100%;text-align:center">
         Cabello
@@ -100,8 +174,7 @@
   </div>
   <div class="col-3">
     <div (click)="_control.categoria('barbería')" style="width:100%;text-align:center">
-        <svg-icon src="assets/blade.svg"
-        [svgStyle]="{ 'width.px':25,'fill':'dodgerblue', 'height.px':25}">
+      <svg-icon src="assets/blade.svg" [svgStyle]="{ 'width.px':25,'fill':'dodgerblue', 'height.px':25}">
       </svg-icon>
       <div style="font-size:14px;color:#555;width:100%;text-align:center">
         Barbería
@@ -110,8 +183,7 @@
   </div>
   <div class="col-3">
     <div (click)="_control.categoria('tattoo')" style="width:100%;text-align:center">
-        <svg-icon src="assets/rock.svg"
-        [svgStyle]="{ 'width.px':25,'fill':'black', 'height.px':25}">
+      <svg-icon src="assets/rock.svg" [svgStyle]="{ 'width.px':25,'fill':'black', 'height.px':25}">
       </svg-icon>
       <div style="font-size:14px;color:#555;width:100%;text-align:center">
         Tattoo
@@ -122,11 +194,10 @@
 
 
 
-<div *ngIf="_control.isMascotas" class="row">
+<div *ngIf="showMascotas" class="row">
   <div class="col-3">
     <div (click)="_control.categoria('clínica')" style="width:100%;text-align:center">
-        <svg-icon src="assets/love.svg"
-        [svgStyle]="{ 'width.px':25,'fill':'coral', 'height.px':25}">
+      <svg-icon src="assets/love.svg" [svgStyle]="{ 'width.px':25,'fill':'coral', 'height.px':25}">
       </svg-icon>
       <div style="font-size:14px;color:#555;width:100%;text-align:center">
         Clínica
@@ -135,19 +206,17 @@
   </div>
   <div class="col-3">
     <div (click)="_control.categoria('paseo')" style="width:100%;text-align:center">
-        <svg-icon src="assets/dog-walk.svg"
-        [svgStyle]="{ 'width.px':25,'fill':'sandybrown', 'height.px':25}">
+      <svg-icon src="assets/dog-walk.svg" [svgStyle]="{ 'width.px':25,'fill':'sandybrown', 'height.px':25}">
       </svg-icon>
-            <div style="font-size:14px;color:#555;width:100%;text-align:center">
+      <div style="font-size:14px;color:#555;width:100%;text-align:center">
         Paseo
       </div>
     </div>
   </div>
   <div class="col-3">
     <div (click)="_control.categoria('estética')" style="width:100%;text-align:center">
-      <svg-icon src="assets/pet-shampoo.svg"
-      [svgStyle]="{ 'width.px':25,'fill':'dodgerblue', 'height.px':25}">
-    </svg-icon>
+      <svg-icon src="assets/pet-shampoo.svg" [svgStyle]="{ 'width.px':25,'fill':'dodgerblue', 'height.px':25}">
+      </svg-icon>
       <div style="font-size:14px;color:#555;width:100%;text-align:center">
         Estética
       </div>

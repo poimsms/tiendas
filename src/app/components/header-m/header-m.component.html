@@ -25,6 +25,16 @@
             style="color:#999;font-size:18px;margin-right:20px"></i>
           <i (click)="showLocation = true" class="fas fa-map-marker-alt" style="color:lightsalmon;font-size:22px"></i>
         </div>
+        <div *ngIf="_control.rightButtons == 'contenido'" style="display:flex;align-items:center">
+            <!-- <i class="far fa-lemon"></i> -->
+            
+
+            <!-- <svg-icon src="assets/money-bag.svg"
+            [svgStyle]="{ 'width.px':22,'fill':'#bbb', 'height.px':22, 'margin-right.px':20 }">
+          </svg-icon> -->
+          <!-- <i class="fas fa-info"></i> -->
+            <i (click)="_control.showInfo = true" class="fas fa-info" style="color:#bbb;font-size:20px"></i>
+          </div>
         <div *ngIf="_control.rightButtons == 'publicar'">
           <div
             style="color:dodgerblue;padding:3px;padding-left:10px;padding-right:10px;border:1px solid dodgerblue;border-radius:10px;font-size:16px">
@@ -39,7 +49,7 @@
             src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556491438/maqueta/logotipo-barberia-retro_1415-688.jpg"
             style="border:3px solid #fff;height:35px;width:35px;border-radius:50%;object-fit:cover">
           <div style="color:#555;font-weight:600;font-size:18px">
-            Barberia clásica DUC
+            Salón firefly
           </div>
         </div>
       </div>
@@ -68,7 +78,7 @@
       <div style="margin-bottom:5px;margin-right:10px;display:flex;align-items:center">
         <i class="fas fa-check" style="margin-right:5px;font-size:18px;color:#bbb"></i>
         <div style="font-size:14.5px;color:#777">
-          Activo
+          Disponible
         </div>
       </div>
     </div>
@@ -120,7 +130,7 @@
 <app-loading *ngIf="_control.isLoading"></app-loading>
 
 
-
+<app-info *ngIf="_control.showInfo"></app-info>
 
 <div *ngIf="showMenu" (click)="showMenu = false"
   style="position:fixed;z-index:999;left:0px;top:0px;width:100%;height:100%;background:rgba(31, 31, 31, 0.5);display:flex;justify-content:flex-end;align-items:flex-start">

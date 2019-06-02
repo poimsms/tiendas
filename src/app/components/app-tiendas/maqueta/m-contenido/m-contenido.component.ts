@@ -33,4 +33,8 @@ export class MContenidoComponent implements OnInit {
     this.router.navigateByUrl('/duc/ofertas');
   }
 
+  openGaleria() {
+    this.router.navigateByUrl('/duc/galeria');
+  }
+
 }

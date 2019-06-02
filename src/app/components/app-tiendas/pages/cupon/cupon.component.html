@@ -1,16 +1,19 @@
 <div style="height:60px"></div>
-<img src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556492033/maqueta/sdfs4556764.jpg"
+<img src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1558685424/maqueta-nueva/5749fc7cdc7c385053766d05949101c6fea734d8.XL2.jpg"
   style="height:270px;width:100%;object-fit:cover">
 
 <div style="margin-top:10px;width:100%;display:flex;align-items:center;justify-content:center">
-  <div style="border-radius:50%;height:7px;width:7px;background:#999;margin-right:5px"></div>
-  <div style="border-radius:50%;height:7px;width:7px;background:#999;margin-right:5px"></div>
-  <div style="border-radius:50%;height:7px;width:7px;background:#999;margin-right:5px"></div>
+  <div style="border-radius:50%;height:10px;width:10px;background:#999;margin-right:5px"></div>
+  <div style="border-radius:50%;height:7px;width:7px;background:#ccc;margin-right:5px"></div>
+  <div style="border-radius:50%;height:7px;width:7px;background:#ccc;margin-right:5px"></div>
 
 </div>
 
 <div style="padding:15px;padding-bottom:25px">
   <div>
+    <div style="display:inline-block;margin-right:5px;color:#999;font-size:18px;text-decoration:line-through;">
+        $18.000
+    </div>
     <div style="display:inline-block;font-size:18px;font-weight:700;color:#ff6633">
       $15.000
     </div>
@@ -19,11 +22,11 @@
       -10%
     </div>
   </div>
-  <div style="color:#999;font-size:14px">
-    Precio normal $18.000
+  <div style="color:#999;font-size:14px;margin-top:5px;margin-bottom:5px">
+    Promoción válida hasta el 30 de Junio
   </div>
   <div style="color:#444;font-weight:600;font-size:16px">
-    Barba completa + Limpieza facial completa + Corte de pelo profesional
+      Uñas acrílicas Vip + Esmaltado permanente un tono + 3 Cristales
   </div>
   <div style="width:100%;display:flex;align-items:center;justify-content:space-between">
     <div style="font-size:14px;color:#999">
@@ -34,22 +37,6 @@
     </div>
   </div>
 
-  <!-- sandybrown -->
-  <hr>
-  <div
-    style="width:100%;padding-left:20px;padding-right:15px;padding-top:0px;padding-bottom:0px;display:flex;align-items:center;justify-content:space-between">
-    <div style="display:flex;align-items:center">
-      <!-- <i class="far fa-comment-dots" style="font-size:22px;color:#07ef07;margin-right:5px"></i> -->
-      <!-- <img src="assets/sleeping.svg" style="width:18px;margin-right:5px"> -->
-      <i class="far fa-calendar-alt" style="font-size:20px;color:sandybrown;margin-right:5px"></i>
-
-      <div style="margin-left:20px;color:#999;font-size:15.5px;overflow:hidden;height:20px">
-        <!-- ¡Pide una reserva! -->
-        Reservar
-      </div>
-    </div>
-    <i class="fas fa-chevron-right" style="color:#bbb;font-size:15px"></i>
-  </div>
 </div>
 
 
@@ -59,6 +46,12 @@
 </div>
 
 <div style="padding:15px;padding-top:25px;padding-bottom:35px">
+
+  <div>
+    DETALLES
+  </div>
+
+  <hr>
 
   <div (click)="showIncluye = !showIncluye "
     style="width:100%;display:flex;align-items:center;justify-content:space-between">
@@ -72,7 +65,7 @@
     <div
       style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
     </div>
-    Corte de cabello clásico o degrade
+    Manicure (limado más sacado de cuticula)
   </div>
   <div *ngIf="showIncluye">
     <div style="line-height: 1.7;color:#666;font-weight:350;margin-top:10px">
@@ -80,24 +73,31 @@
         <div
           style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
         </div>
-        Corte de cabello clásico o degrade (desde 0 o 0.5) realizado por una barbera profesional, que incluye lavado y
-        peinado de cabello, y aplicación de producto si el cliente lo desea.
+        Manicure (limado más sacado de cuticula)
       </div>
       <div style="width:100%;font-size:14.5px">
         <div
           style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
         </div>
-        Perfilado de barba corte o rebaje de barba asesorado, incluye perfilado con navaja, toallas calientes e
-        hidratación con aceite.
+        Extensión de uña Tips blanco o natural 
       </div>
       <div style="width:100%;font-size:14.5px">
         <div
           style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
         </div>
-        Masaje relajante craneal se realiza luego de terminar el corte durante el lavado del cabello.
+        Capa de gel con polvo acrílico (2)
       </div>
+      <div style="width:100%;font-size:14.5px">
+          <div
+            style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
+          </div>
+          Sellado con Esmalte vitrificante.
+        </div>
     </div>
   </div>
+
+
+
 
 
 
@@ -113,7 +113,7 @@
     <div
       style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
     </div>
-    La sesión tiene una duración aproximada
+    Puedes escoger Francesa o Natural
   </div>
 
   <div *ngIf="showNotas" style="padding:15px;padding-top:0px;padding-bottom:35px">
@@ -122,27 +122,122 @@
         <div
           style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
         </div>
-        La sesión tiene una duración aproximada de 60 minutos.
+        Puedes escoger Francesa o Natural 
       </div>
       <div style="width:100%;font-size:14.5px">
         <div
           style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
         </div>
-        Reservas con al menos 24 horas de anticipación
+        Es una técnica menos invasiva para el cuidado de tu uña 
       </div>
       <div style="width:100%;font-size:14.5px">
-        <div
-          style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
+          <div
+            style="display:inline-block;margin-right:10px;margin-bottom:3px;height:6px;width:6px;background:#999;border-radius:50%">
+          </div>
+          Productos de excelente calidad. 
         </div>
-        Validación mobile
-      </div>
 
     </div>
   </div>
 
-  <div style="height:100px"></div>
+
+
+
+
+
+  <div (click)="showTienda = !showTienda"
+    style="margin-top:20px;width:100%;display:flex;align-items:center;justify-content:space-between">
+    <div style="font-size:16px;color:#444;font-weight:600">
+      Tienda
+    </div>
+    <i *ngIf="showTienda" class="fas fa-chevron-up" style="margin-right:10px;color:#bbb;font-size:16px"></i>
+    <i *ngIf="!showTienda" class="fas fa-chevron-down" style="margin-right:10px;color:#bbb;font-size:16px"></i>
+  </div>
+
+  <div *ngIf="showTienda" style="margin-top:10px;width:100%;display:flex;align-items:center">
+    <img src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1558685327/maqueta-nueva/Firefly_Logo_Final-1024x1024.jpg"
+      style="border:1px solid #eee;height:80px;width:80px;border-radius:15px;object-fit:cover">
+
+    <div style="display:inline-block;margin-left:20px">
+      <div style="font-size:18px;color:#555;font-weight:500">
+        Salón firefly
+      </div>
+      <div style="display:flex;margin-top:2px;align-items:center">
+        <i class="fas fa-star" style="font-size:14px;color:gold;margin-right:5px"></i>
+        <i class="fas fa-star" style="font-size:14px;color:gold;margin-right:5px"></i>
+        <i class="fas fa-star" style="font-size:14px;color:gold;margin-right:5px"></i>
+        <i class="fas fa-star" style="font-size:14px;color:whitesmoke;margin-right:5px"></i>
+        <i class="fas fa-star" style="font-size:14px;color:whitesmoke;margin-right:5px"></i>
+        <div style="font-size:15px;color:#777">
+          (133)
+        </div>
+      </div>
+      <div style="font-size:15px;margin-top:2px;color:darkorange">
+        14 comentarios
+      </div>
+    </div>
+  </div>
+
 
 </div>
+
+<div style="width:100%;height:10px;background:whitesmoke">
+</div>
+
+<div style="padding:15px">
+  <div style="margin-top:10px;width:100%;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex">
+      <i class="fas fa-map-marker-alt" style="color:lightsalmon;font-size:18px"></i>
+      <div style="margin-left:20px;font-size:16px;">
+        Av. Ramon Picarte 2201, Vadivia
+      </div>
+    </div>
+    <i class="fas fa-chevron-right" style="color:#999;font-size:15px"></i>
+  </div>
+  <div style="margin-top:30px;width:100%;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;width:100%">
+      <i class="fas fa-phone" style="color:orange;font-size:18px"></i>
+      <div style="padding-left:20px;padding-right:10px;width:100%;display:flex;justify-content:space-between">
+        <div>
+          Contacto
+        </div>
+        <div style="font-size:14px;color:#555">
+          +59 9 73829902
+        </div>
+      </div>
+
+    </div>
+    <i class="fas fa-chevron-right" style="color:#999;font-size:15px"></i>
+  </div>
+  <div style="margin-top:30px;width:100%;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;width:100%">
+      <i class="far fa-clock" style="color:#bbb;font-size:18px"></i>
+      <div style="padding-left:20px;padding-right:10px;width:100%;display:flex;justify-content:space-between">
+          <div>
+            Horario
+          </div>
+          <div style="font-size:14px;color:#555">
+            Lunes 10:30 - 18:30
+          </div>
+        </div>
+      <!-- <div style="margin-left:20px;font-size:16px;color:#555">
+        Ver horario
+      </div> -->
+    </div>
+    <i class="fas fa-chevron-right" style="color:#999;font-size:15px"></i>
+  </div>
+  
+  <div style="height:10px"></div>
+
+</div>
+
+<div style="width:100%;height:10px;background:whitesmoke">
+  </div>
+
+
+
+<div style="height:100px"></div>
+
 
 
 <div style="width:100%;height:10px;background:whitesmoke">
@@ -173,10 +268,11 @@
   style="border-top:1px solid #eee;background:white;position:fixed;bottom:0px;left:0px;width:100%;display:flex;align-items:center;justify-content:space-between">
   <div>
     <span style="font-size:15px;color:#555;margin-left:15px;margin-right:5px">Total:</span>
-    <span style="color:#ff6633;font-size:18px;font-weight:500">$15.000</span>    
+    <span style="color:#ff6633;font-size:18px;font-weight:500">$15.000</span>
   </div>
-  <div style="color:white;font-weight:500;font-size:18px;padding:6px;padding-left:25px;padding-right:25px;background:orange">
-    Comprar
+  <div
+    style="color:white;font-weight:500;font-size:18px;padding:8px;padding-left:25px;padding-right:25px;background:orange">
+    ¡Comprar!
   </div>
 </div>
 

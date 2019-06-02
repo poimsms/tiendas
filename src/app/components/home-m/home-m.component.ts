@@ -5,11 +5,11 @@ import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-home-m',
+  templateUrl: './home-m.component.html',
+  styleUrls: ['./home-m.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeMComponent implements OnInit {
 
   showFlecha: boolean;
   showLocation: boolean;
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private router: Router,
-    public _control: ControlService,
+    private _control: ControlService,
     private _data: DataService
   ) {
 
@@ -81,3 +81,4 @@ export class HomeComponent implements OnInit {
   }
 
 }
+

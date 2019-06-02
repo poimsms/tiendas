@@ -1,16 +1,15 @@
-<div style="height:70px"></div>
+<div style="height:60px"></div>
 
 <div style="padding:15px">
-  <!-- ;background-image: url('https://res.cloudinary.com/ddon9fx1n/image/upload/v1556491438/maqueta/logotipo-barberia-retro_1415-688.jpg') -->
-  <!-- <div style="background-image: url('https://res.cloudinary.com/ddon9fx1n/image/upload/v1556491438/maqueta/logotipo-barberia-retro_1415-688.jpg')"> -->
 
   <div style="width:100%;display:flex;align-items:center">
     <img
-      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556491438/maqueta/logotipo-barberia-retro_1415-688.jpg"
-      style="height:80px;width:80px;border-radius:15px;object-fit:cover">
+      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1558685327/maqueta-nueva/Firefly_Logo_Final-1024x1024.jpg"
+      style="border:1px solid #eee;height:80px;width:80px;border-radius:15px;object-fit:cover">
+
     <div style="display:inline-block;margin-left:20px">
       <div style="font-size:18px;color:#555;font-weight:500">
-        Barbería clásica DUP
+        Salón firefly
       </div>
       <div style="display:flex;margin-top:2px;align-items:center">
         <i class="fas fa-star" style="font-size:14px;color:gold;margin-right:5px"></i>
@@ -30,130 +29,162 @@
 
 
   <div style="margin-top:25px;width:100%;display:flex;align-items:center">
-    <div style="width:50%;border-right:1px solid #eee;display:flex;align-items:center">
-      <i class="far fa-clock" style="color:#bbb;font-size:20px"></i>
-      <div style="margin-left:10px;color:#999;font-size:14px">
-        10:00 - 18:30
-        <!-- <div>
-          horario
+    <div style="width:80%;border-right:1px solid #eee;">
+      <!-- <div style="color:#999">
+        Av. Ramon Picarte 1032 - Valdivia
+      </div> -->
+      <div>
+          <i class="fas fa-map-marker-alt" style="color:#bbb;font-size:16px"></i>
+          <span style="margin-left:10px;color:#999;font-size:14px">
+              Av. Ramon Picarte 1032 - Valdivia
+          </span>
+      </div>
+      <div>
+          <i class="far fa-clock" style="color:#bbb;font-size:16px"></i>
+          <span style="margin-left:10px;color:#999;font-size:14px">
+            10:00 - 18:30
+          </span>
+      </div>
+      
+    </div>
+    
+    <div style="width:20%;display:flex;align-items:center">
+      <div style="margin-left:20%;border-radius:50%;border:1px solid orange;height:30px;width:30px;display:flex;justify-content:center;align-items:center">
+          <i class="fas fa-phone" style="color:orange;font-size:14px"></i>
+      </div>
+     
+      <!-- <div style="margin-left:10px;color:#999;font-size:14px">
+        +56 9 76812201
+      </div> -->
+    </div>
+  </div>
+
+  <div style="margin-top:10px;width:100%;display:flex;align-items:center;justify-content:space-between">
+    <div style="margin-right:30px;color:#777;font-size:16px">     
+        Valorar esta tienda 
+    </div>
+    <div style="display:flex;align-items:center">      
+      <div style="margin-right:10px;border-radius:4px;padding:4px;border:1px solid #eee">
+          <i class="far fa-star" style="color:#bbb;font-size:18px"></i>
+      </div>
+      <div style="margin-right:10px;border-radius:4px;padding:4px;border:1px solid #eee">
+          <i class="far fa-star" style="color:#bbb;font-size:18px"></i>
+      </div>
+      <div style="margin-right:10px;border-radius:4px;padding:4px;border:1px solid #eee">
+          <i class="far fa-star" style="color:#bbb;font-size:18px"></i>
+      </div>
+      <div style="margin-right:10px;border-radius:4px;padding:4px;border:1px solid #eee">
+          <i class="far fa-star" style="color:#bbb;font-size:18px"></i>
+      </div>
+      <div style="margin-right:10px;border-radius:4px;padding:4px;border:1px solid #eee">
+          <i class="far fa-star" style="color:#bbb;font-size:18px"></i>
+      </div>
+    </div>
+
+    
+  </div>
+ 
+
+
+</div>
+
+<div style="height:10px;background:whitesmoke"></div>
+
+<div (click)="openGaleria()"
+  style="margin-top:10px;padding-right:15px;padding-left:15px;width:100%;display:flex;justify-content:space-between;align-items:center">
+  <h6>Galería (16)</h6>
+  <i class="fas fa-chevron-right" style="margin-bottom:8px;color:#999;font-size:15px"></i>
+</div>
+
+<div style="padding:10px;width:100%;display:flex;justify-content:space-between">
+
+  <div style="width:48%">
+    <img (click)="openGaleria()"
+      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1558653958/maqueta/nails-simpsons0001.jpg"
+      style="height:120px;width:100%;border-radius:10px;object-fit:cover">
+  </div>
+
+  <div style="width:48%;position:relative">
+    <img (click)="openGaleria()" src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1558685374/maqueta-nueva/rBVaSFugIfaAY4yUAANjdmU9NaI424.jpg"
+      style="height:120px;width:100%;border-radius:10px;object-fit:cover">
+    <div style="position:absolute;bottom:10px;right:10px">
+      <div
+        style="border-radius:3px;font-size:15px;padding-left:5px;padding-right:5px;background:rgb(31, 31, 31, 0.5);color:white">
+        +9
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+<div style="height:10px;background:whitesmoke"></div>
+
+<div style="padding:15px">
+  <h6>Promociones</h6>
+  <div (click)="openCupon()"
+    style="width:100%;padding-top:15px;padding-bottom:10px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center">
+      <div style="height:70px;width:70px">
+        <img src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1558685022/maqueta-nueva/nail-salon-specials-478608.jpg"
+          style="height:70px;width:70px;object-fit:cover">
+      </div>
+      <div style="display:inline-block;margin-left:20px;color:#444">
+        <div style="overflow:hidden;height:20px">
+            Uñas acrílicas Vip + Esmaltado permanente un tono + 3 Cristales en Candy Nails, Providencia
+        </div>
+        <div style="font-size:13.5px;color:#888">
+          Cupón
+        </div>
+        <div style="color:orange;font-size:16px">
+          $14.900
+          <span style="text-decoration: line-through;margin-left:5px;color:#999;font-size:14px">
+            $17.500
+          </span>
+        </div>
+        <!-- <div
+          style="display:inline-block;margin-top:3px;padding-left:15px;padding-right:15px;border-radius:15px;border:1px solid darkorange">
+          <div style="color:darkorange;font-size:16px">
+            Reservar ahora
+          </div>
         </div> -->
       </div>
     </div>
-
-    <div style="width:50%;display:flex;align-items:center">
-      <i class="fab fa-whatsapp" style="margin-left:10px;color:limegreen;font-size:22px"></i>
-      <div style="margin-left:10px;color:#999;font-size:14px">
-        +56 9 76812201
-      </div>
-    </div>
+    <i class="fas fa-chevron-right" style="color:#999;font-size:15px"></i>
   </div>
-
-  <!-- </div> -->
-
-
-  <!-- <div
-    style="width:100%;padding-top:15px;padding-bottom:5px;display:flex;align-items:center;justify-content:space-between">
-    <div>
-      <i class="fas fa-map-marker-alt" style="color:#bbb;font-size:18px"></i>
-      <span style="margin-left:20px;color:#999;font-size:15px">
-        Simon Bolivar 802
-      </span>
-    </div>
-    <i class="fas fa-chevron-right" style="color:#bbb;font-size:18px"></i>
-  </div> -->
-
-  <hr>
-
-  <div style="width:100%;display:flex;align-items:flex-start;flex-wrap:wrap">
-    <div style="margin-top:5px;width:50%;display:flex;align-items:flex-start">
-      <i class="far fa-check-circle" style="font-size:16px;color:#bbb;margin-right:5px"></i>
-      <div style="font-size:13px;color:#999">
-        Acepta mascotas
+  <div (click)="openCupon()"
+    style="width:100%;padding-top:15px;padding-bottom:10px">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center">
+        <img
+          src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1558685070/maqueta-nueva/images.png"
+          style="width:90px;object-fit:cover">
+        <div style="margin-left:10px;font-size:16px;color:#888;">
+          <div style="color:#555">
+            Ideal para cumpleaños
+          </div>
+          <div style="font-size:13.5px;color:#888">
+            Giftcard
+          </div>
+          Canjea
+          <span style="color:orange;">$10.000</span>
+          en productos
+        </div>
       </div>
-    </div>
-    <div style="margin-top:5px;width:50%;display:flex;align-items:flex-start">
-      <i class="far fa-check-circle" style="font-size:16px;color:#bbb;margin-right:5px"></i>
-      <div style="font-size:13px;color:#999">
-        Puedes leer revistas
-      </div>
-    </div>
+      <i class="fas fa-chevron-right" style="color:#999;font-size:15px"></i>
 
-    <div style="margin-top:5px;width:50%;display:flex;align-items:flex-start">
-      <i class="far fa-check-circle" style="font-size:16px;color:#bbb;margin-right:5px"></i>
-      <div style="font-size:13px;color:#999">
-        Wi-Fi Gratis
-      </div>
+
+
     </div>
   </div>
 </div>
 
 
-
-<div style="width:100%;height:10px;background:#eee"></div>
-
-
-<div style="padding:15px">
-  <div style="font-size:16px;color:#555;font-weight:600">
-    Promociones
-  </div>
-  <div (click)="openCupon()"
-    style="width:100%;padding-top:15px;padding-bottom:10px;display:flex;align-items:center;justify-content:space-between">
-    <div style="display:flex;align-items:center">
-      <div style="height:70px;width:70px">
-        <img src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556492033/maqueta/sdfs4556764.jpg"
-          style="height:70px;width:70px;object-fit:cover">
-      </div>
-      <div style="display:inline-block;margin-left:20px;color:#444">
-        <div style="overflow:hidden;height:20px">
-          Barba completa + Limpieza facial completa + Corte de pelo profesional
-        </div>
-        <div style="color:orange;font-size:15px">
-          $14.900
-          <span style="text-decoration: line-through;margin-left:5px;color:#999;font-size:13px">
-            $17.500
-          </span>
-        </div>
-        <div
-          style="display:inline-block;margin-top:3px;padding-left:15px;padding-right:15px;border-radius:15px;border:1px solid darkorange">
-          <div style="color:darkorange;font-size:16px">
-            Reservar ahora
-          </div>
-        </div>
-      </div>
-    </div>
-    <i class="fas fa-chevron-right" style="color:#999;font-size:15px"></i>
-  </div>
-  <div (click)="openCupon()"
-    style="width:100%;padding-top:15px;padding-bottom:10px;display:flex;align-items:center;justify-content:space-between">
-    <div style="display:flex;align-items:center">
-      <div style="height:70px;width:70px">
-        <img src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556492033/maqueta/sdfs4556764.jpg"
-          style="height:70px;width:70px;object-fit:cover">
-      </div>
-      <div style="display:inline-block;margin-left:20px;color:#444">
-        <div style="overflow:hidden;height:20px">
-          Barba completa + Limpieza facial completa + Corte de pelo profesional
-        </div>
-        <div style="color:orange;font-size:15px">
-          $14.900
-          <span style="text-decoration: line-through;margin-left:5px;color:#999;font-size:13px">
-            $17.500
-          </span>
-        </div>
-        <div
-          style="display:inline-block;margin-top:3px;padding-left:15px;padding-right:15px;border-radius:15px;border:1px solid darkorange">
-          <div style="color:darkorange;font-size:16px">
-            Reservar ahora
-          </div>
-        </div>
-      </div>
-    </div>
-    <i class="fas fa-chevron-right" style="color:#999;font-size:15px"></i>
-  </div>
-</div>
-
-
-<div style="width:100%;height:10px;background:#eee"></div>
+<div style="height:10px;background:whitesmoke"></div>
+<!-- <div style="width:100%;height:10px;background:#eee"></div> -->
 
 <div style="padding:15px">
   <!-- <div style="padding:15px">
@@ -161,11 +192,29 @@
     Comentarios (14)
   </div> -->
 
-  <div style="display:flex;align-items:center;justify-content:space-between">
+  <!-- <div style="display:flex;align-items:center;justify-content:space-between">
     <div style="font-size:16px;color:#555;font-weight:600">
       Comentarios (14)
     </div>
     <i class="fas fa-chevron-right" style="color:#999;font-size:15px"></i>
+  </div> -->
+  <!-- <h6>Comentarios (9)</h6> -->
+
+  <div style="width:100%;display:flex;justify-content:space-between;align-items:center">
+    <h6>Comentarios (9)</h6>
+    <i class="fas fa-chevron-right" style="margin-bottom:8px;color:#999;font-size:15px"></i>
+  </div>
+
+  <div style="margin-top:10px;margin-bottom:5px;display:flex">
+    <div style="padding-left:5px;padding-right:5px;border-radius:10px;font-size:14.5px;color:#777;border:1px solid #eee">
+       más útil
+    </div>
+    <div style="margin-left:10px;padding-left:5px;padding-right:5px;border-radius:10px;font-size:14.5px;color:#777;border:1px solid #eee">
+        reciente
+     </div>
+     <div style="margin-left:10px;padding-left:5px;padding-right:5px;border-radius:10px;font-size:14.5px;color:#777;border:1px solid #eee">
+        más favorable
+     </div>
   </div>
 
 
@@ -173,11 +222,11 @@
 
 
   <div style="display:flex;align-items:center">
-    <img src="https://www.useit.es/sites/default/files/featured-2_0.jpg"
+    <img src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1558685103/maqueta-nueva/789c4e4b8fc51dd20fbfa4038ebc8996236305.jpg"
       style="border:1px solid #eee;height:35px;width:35px;border-radius:50%;object-fit:cover">
     <div style="margin-left:5px">
       <div style="color:#444;font-weight:500;font-size:14px">
-        Oscar Garcia
+        Fernanda Risco
       </div>
       <div style="display:flex;align-items:center">
         <i class="fas fa-star" style="font-size:12px;color:darkorange;"></i>
@@ -197,27 +246,29 @@
   </div>
 
   <div style="margin-left:40px;color:#555;font-size:15px">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, error! Error totam aut dolore, eligendi dolores
-    sint, dolorum eaque ea saepe mollitia, fugiat sed architecto veniam natus cum quia asperiores.
+      Realmente me siento muy bien, el ambiente, el servicio, el efecto. 
   </div>
 
   <div style="margin-top:10px;display:flex;justify-content:flex-end">
     <img
-      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556493295/maqueta/52599268_2138836749536414_2309583698095243264_n.jpg"
+      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1558685130/maqueta-nueva/ABYRExvUUjkwajkbjA_5W2L22Bw3xmdHTXHHF8GxR-TDKvDcpCk1nbhEFZ9-sKAiQs6E6HQccbzhvkqkRN4krQ.jpg"
       style="height:70px;width:70px;object-fit:cover;margin-right:10px">
     <img
-      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556493295/maqueta/52513914_2138836799536409_3769148541738418176_n.jpg"
+      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1558685162/maqueta-nueva/KwfWrfE54jlMdpn1mJ69qsF7wEzP_AIaN_8cPoVFUKSZc63ep-j1qrxJEHPk8Gg_Qs6E6HQccbzhvkqkRN4krQ.jpg"
       style="height:70px;width:70px;object-fit:cover;margin-right:10px">
-  </div>
+      <img
+      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1558685192/maqueta-nueva/5jRvrOFOv900F-9hMWj-jGvIweGpQyn-vriCbcJWTHmrIH_jzQJ0LupvYqchJ3XTQs6E6HQccbzhvkqkRN4krQ.jpg"
+      style="height:70px;width:70px;object-fit:cover;margin-right:10px">
+    </div>
 
 
 
   <div style="margin-top:30px;display:flex;align-items:center">
-    <img src="https://www.useit.es/sites/default/files/featured-2_0.jpg"
+    <img src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1558685220/maqueta-nueva/a5a33dcd10cdacee7b03e48352c5e828498624.jpg"
       style="border:1px solid #eee;height:35px;width:35px;border-radius:50%;object-fit:cover">
     <div style="margin-left:5px">
       <div style="color:#444;font-weight:500;font-size:14px">
-        Oscar Garcia
+        Lorena
       </div>
       <div style="display:flex;align-items:center">
         <i class="fas fa-star" style="font-size:12px;color:darkorange;"></i>
@@ -237,16 +288,18 @@
   </div>
 
   <div style="margin-left:40px;color:#555;font-size:15px">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, error! Error totam aut dolore, eligendi dolores
-    sint.
+      Una tienda de uñas recomendada por las hermanas pequeñas ha estado reparando las uñas durante más de un mes después de que las uñas hayan sido cultivadas.
   </div>
 
   <div style="margin-top:10px;display:flex;justify-content:flex-end">
     <img
-      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1556493216/maqueta/54432953_2158297734256982_7752093773718355968_n.jpg"
+      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1558685256/maqueta-nueva/pWUNveNHe-MzFrlCeVMHN7duakmItHiQAlLKXs5lLNxvfvmCFea7O1M-cDth5-B8Qs6E6HQccbzhvkqkRN4krQ.jpg"
       style="height:70px;width:70px;object-fit:cover;margin-right:10px">
-    <!-- <img src="https://www.useit.es/sites/default/files/featured-2_0.jpg" style="height:70px;width:70px;object-fit:cover;margin-right:10px"> -->
-  </div>
+      <img
+      src="https://res.cloudinary.com/ddon9fx1n/image/upload/v1558685285/maqueta-nueva/3716ec04e1b1a378cc302acd0a12f0801478603.jpg"
+      style="height:70px;width:70px;object-fit:cover;margin-right:10px">
+  
+    </div>
 
 
 
@@ -259,37 +312,8 @@
 
 
 
-<div style="width:100%;height:10px;background:#eee"></div>
-
-<div style="padding-left:20px;padding-right:15px;padding-top:20px;padding-bottom:30px">
 
 
-  <div (click)="showBeneficio = true" style="width:100%;display:flex;align-items:center;justify-content:space-between">
-    <div style="display:flex;align-items:center">
-      <svg-icon src="assets/money-bag.svg"
-        [svgStyle]="{ 'width.px':22,'fill':'sandybrown', 'height.px':22, 'margin-right.px':5 }">
-      </svg-icon>
-      <div style="margin-left:20px;color:#666;font-size:16px;overflow:hidden;height:20px">
-        Si está insatisfecho con su estilo de cabello dentro de los 14 días posteriores, puede mejorarlo sin costo
-        alguno.
-      </div>
-    </div>
-    <i class="fas fa-chevron-right" style="color:#999;font-size:15px"></i>
-  </div>
-  <div style="height:30px"></div>
-  <div style="width:100%;display:flex;align-items:center;justify-content:space-between">
-    <div>
-      <i class="fas fa-map-marker-alt" style="color:#bbb;font-size:18px"></i>
-      <span style="margin-left:30px;color:#666;font-size:16px">
-        Simon Bolivar 802
-      </span>
-    </div>
-    <i class="fas fa-chevron-right" style="color:#999;font-size:15px"></i>
-  </div>
-</div>
-
-
-<div style="width:100%;height:10px;background:#eee"></div>
 
 
 

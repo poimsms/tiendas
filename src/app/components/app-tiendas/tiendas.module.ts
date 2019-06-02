@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TiendasRountingModule } from './tiendas-rounting.module';
+import { TiendasRoutingModule } from './tiendas-routing.module';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -21,6 +21,9 @@ import { NuevoComponent } from './pages/nuevo/nuevo.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { VentasComponent } from './pages/ventas/ventas.component';
 import { AgendaBuyComponent } from './pages/agenda-buy/agenda-buy.component';
+import { InfoComponent } from './pages/info/info.component';
+import { GiftcardComponent } from './pages/giftcard/giftcard.component';
+import { GaleriaComponent } from './pages/galeria/galeria.component';
 
 @NgModule({
   declarations: [
@@ -37,13 +40,17 @@ import { AgendaBuyComponent } from './pages/agenda-buy/agenda-buy.component';
     MPrincipalComponent,
     MContenidoComponent,
     MCuponComponent,
-    AgendaBuyComponent
+    AgendaBuyComponent,
+    InfoComponent,
+    GiftcardComponent,
+    GaleriaComponent
   ],
   imports: [
     CommonModule,
     AngularSvgIconModule,
     HttpClientModule,
-    TiendasRountingModule
-  ]
+    TiendasRoutingModule
+  ],
+  exports: [InfoComponent]
 })
 export class TiendasModule { }

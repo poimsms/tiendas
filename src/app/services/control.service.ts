@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ControlService {
+
+  isMobile: boolean;
 
   isHome = true;
   isBelleza = false;
@@ -15,6 +18,7 @@ export class ControlService {
   showSections = true;
   showArrow = false;
   showGuardar = false;
+  showInfo = false;
 
   // CONTROL SIDEBAR
   isSidebar = false;
@@ -35,8 +39,10 @@ export class ControlService {
   showRegistro = false;
 
 
-  constructor() { 
-  }
+  constructor(private deviceService: DeviceDetectorService) {
+    this.isMobile = this.deviceService.isMobile();
+  }  
+
 
   activarSeccion(seccion) {
 
@@ -116,6 +122,7 @@ export class ControlService {
       this.showArrow = true;
       this.showSections = false;
       this.back = 'home';
+      this.rightButtons = 'contenido';
     }
     if (page == 'oferta') {      
       this.tituloPage = 'Atrás';
@@ -123,6 +130,13 @@ export class ControlService {
       this.showSections = false;
       this.back = 'contenido'; 
       this.rightButtons = 'oferta';
+    }
+    if (page == 'galeria') {      
+      this.tituloPage = 'Atrás';
+      this.showArrow = true;
+      this.showSections = false;
+      this.back = 'galeria'; 
+      this.rightButtons = 'galeria';
     }   
     if (page == 'nuevo') {
       this.tituloPage = page;

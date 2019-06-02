@@ -16,6 +16,7 @@ import { ProductosComponent } from './pages/productos/productos.component';
 import { VentasComponent } from './pages/ventas/ventas.component';
 import { NuevoComponent } from './pages/nuevo/nuevo.component';
 import { AgendaBuyComponent } from './pages/agenda-buy/agenda-buy.component';
+import { GaleriaComponent } from './pages/galeria/galeria.component';
 
 const routes: Routes = [
 
@@ -24,6 +25,8 @@ const routes: Routes = [
     { path: 'agenda', component: AgendaComponent },
     { path: 'agenda-config', component: AgendaConfigComponent },
     { path: 'duc/ofertas', component: CuponComponent },
+    { path: 'duc/galeria', component: GaleriaComponent },
+
     { path: 'formulario-inicio', component: FormularioInicioComponent },
     { path: 'tienda', component: TiendaComponent },
     { path: 'cupones', component: ProductosComponent },
@@ -41,4 +44,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class TiendasRountingModule { }
+export class TiendasRoutingModule { }

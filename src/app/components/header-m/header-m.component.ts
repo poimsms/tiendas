@@ -4,11 +4,11 @@ import { Router } from '@angular/router';
 import { ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-header-m',
+  templateUrl: './header-m.component.html',
+  styleUrls: ['./header-m.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderMComponent implements OnInit {
   showRegistro = true;
   res1: any;
   res2: any;
@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
       } else {
-        document.getElementById("navbar").style.top = "-60px";
+        document.getElementById("navbar").style.top = "-135px";
       }
       prevScrollpos = currentScrollPos;
     }
@@ -52,6 +52,11 @@ isFacebookApp() {
       this.router.navigateByUrl('/tienda');
     }
     if ( this._control.back == 'contenido' ) {
+      this.router.navigateByUrl('/duc');
+      this._control.showArrow = true;
+      this._control.tituloPage = '';
+    }
+    if ( this._control.back == 'galeria' ) {
       this.router.navigateByUrl('/duc');
       this._control.showArrow = true;
       this._control.tituloPage = '';

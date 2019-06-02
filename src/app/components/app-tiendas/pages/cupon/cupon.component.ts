@@ -8,8 +8,9 @@ import { ControlService } from 'src/app/services/control.service';
 })
 export class CuponComponent implements OnInit {
 
-  showIncluye = true;
+  showIncluye = false;
   showNotas = false;
+  showTienda = true;
 
   constructor(private _control: ControlService) { }
 

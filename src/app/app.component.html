@@ -1,15 +1,11 @@
-
-<app-desktop *ngIf="!isMobile"></app-desktop>
-
-<!-- <app-header *ngIf="isMobile"></app-header>
-
-<router-outlet *ngIf="isMobile"></router-outlet> -->
-
-<div *ngIf="isMobile">
-
-
-<app-header></app-header>
-
-<router-outlet></router-outlet>
-
+<div *ngIf="_control.isMobile">
+    <app-header-m></app-header-m>
+    <router-outlet></router-outlet>
 </div>
+
+<div *ngIf="!_control.isMobile" style="background:white">
+    <app-header-d></app-header-d>
+    <router-outlet></router-outlet>
+</div>
+
+

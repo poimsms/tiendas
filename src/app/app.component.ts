@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DeviceDetectorService } from 'ngx-device-detector';
+import { ControlService } from './services/control.service';
 
 
 @Component({
@@ -11,7 +11,6 @@ export class AppComponent {
   title = 'tiendas';
   isMobile: boolean;
 
-  constructor(private deviceService: DeviceDetectorService) {
-    this.isMobile = this.deviceService.isMobile();
+  constructor(public _control:ControlService) {
   }
 }
